@@ -13,7 +13,7 @@ function HorMovText({ children, duration = 50 }: HorMovTextProps) {
 
   return (
     <>
-      <div className="absolute bottom-4 text-8xl font-bold w-full h-32 overflow-hidden text-slate-300">
+      <div className="absolute bottom-4 text-9xl font-bold w-full h-32 overflow-hidden text-slate-300">
         {/* <motion.div style={{ x: position }} className="absolute w-full h-full"> */}
         <motion.div
           animate={{

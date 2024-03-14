@@ -23,7 +23,7 @@ function Hero() {
         style={{ y: positionX2 }}
       >
         <motion.div
-          className="h-fit flex flex-col justify-center items-start relative"
+          className="h-fit flex flex-col gap-10 justify-center items-start relative"
           style={{
             paddingLeft: "20%",
             top: "50%",
@@ -33,13 +33,13 @@ function Hero() {
           }}
         >
           <motion.div
-            className="mb-10 text-6xl text-nowrap"
+            className="text-6xl text-nowrap"
             // style={{ y: positionX2 }}
           >
             Daniel Derudder
           </motion.div>
           <motion.div
-            className="mb-10 text-5xl text-nowrap"
+            className="text-5xl text-nowrap"
             // style={{ y: positionX2 }}
           >
             <LeftHanger />
@@ -56,7 +56,7 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            className="mb-10 text-6xl text-nowrap w-1/2"
+            className="text-6xl text-nowrap w-1/2"
             // style={{ y: positionX2 }}
           >
             <Intro />

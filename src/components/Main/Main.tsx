@@ -27,23 +27,9 @@ const projects = [
 
 function Main() {
   return (
-    <main className="text-slate-800 w-full" style={{ height: "1000vh" }}>
+    <main className=" w-full">
       <Hero />
       <Gallery projects={projects} />
-      <div>
-        Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Augue ut
-        lectus arcu bibendum at varius. Etiam tempor orci eu lobortis elementum
-        nibh tellus molestie. Risus sed vulputate odio ut enim blandit volutpat
-        maecenas. Rhoncus dolor purus non enim praesent elementum facilisis leo
-        vel. Consectetur lorem donec massa sapien. Rutrum tellus pellentesque eu
-        tincidunt tortor aliquam nulla facilisi cras. In pellentesque massa
-        placerat duis ultricies lacus sed turpis. Dui accumsan sit amet nulla
-        facilisi morbi tempus. Tortor dignissim convallis aenean et tortor at.
-        Dolor magna eget est lorem. Condimentum vitae sapien pellentesque
-        habitant morbi tristique senectus et.
-      </div>
-      <div className="h-screen w-full"></div>
-      <div className="h-screen w-full"></div>
     </main>
   );
 }

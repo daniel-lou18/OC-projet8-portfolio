@@ -24,16 +24,17 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
           className="w-20 h-20 rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-30"
           initial={{ scale: 0 }}
           animate={{
-            scale: [0.1, 1.5, 1],
+            scale: [0, 1.5, 1],
             translateX: mouseX,
             translateY: mouseY,
+            transition: {
+              duration: 0.15,
+              type: "spring",
+              damping: 15,
+              stiffness: 250,
+            },
           }}
           exit={{ scale: 0 }}
-          transition={{
-            duration: 0.15,
-            type: "spring",
-            damping: 15,
-          }}
           onMouseMove={handleMouseMove}
           onMouseLeave={resetPosition}
         >
