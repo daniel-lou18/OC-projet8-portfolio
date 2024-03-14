@@ -3,9 +3,6 @@ import imgMusic from "../../assets/images/spotilite-searchpage.webp";
 import imgBooks from "../../assets/images/book_add - Copie.webp";
 import imgKasa from "../../assets/images/_Body.webp";
 import Hero from "../Hero/Hero";
-import Hamburger from "../Header/Hamburger";
-import { useEffect, useRef, useState } from "react";
-import { useScroll, useTransform } from "framer-motion";
 
 const projects = [
   {
@@ -29,27 +26,9 @@ const projects = [
 ];
 
 function Main() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start end", "start start"],
-  });
-  const [showHamburger, setShowHamburger] = useState<boolean>(false);
-
-  useEffect(() => {
-    function toggleHamburger() {
-      if (window.scrollY > 200) setShowHamburger(true);
-      else setShowHamburger(false);
-    }
-    window.addEventListener("scroll", toggleHamburger);
-
-    return () => window.removeEventListener("scroll", toggleHamburger);
-  }, [showHamburger]);
-
   return (
     <main className="text-slate-800 w-full" style={{ height: "1000vh" }}>
-      <Hero ref={heroRef} />
-      <Hamburger isVisible={showHamburger} />
+      <Hero />
       <Gallery projects={projects} />
       <div>
         Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Augue ut

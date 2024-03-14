@@ -1,14 +1,14 @@
 import { useScroll, motion, useTransform } from "framer-motion";
 import LetterChangeText from "../LetterChangeText/LetterChangeText";
-import { forwardRef, useRef } from "react";
+import { useRef } from "react";
 import Intro from "./Intro";
 import ScrollDown from "./ScrollDown";
 import LeftHanger from "./LeftHanger";
 
-const Hero = forwardRef<HTMLDivElement>(function Hero(_, innerRef) {
-  const outerRef = useRef<HTMLDivElement>(null);
+function Hero() {
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: outerRef,
+    target: ref,
     offset: ["start start", "end start"],
   });
   // const positionX = useTransform(scrollYProgress, [0, 1], [0, -750]);
@@ -19,7 +19,7 @@ const Hero = forwardRef<HTMLDivElement>(function Hero(_, innerRef) {
     <>
       <motion.div
         className="h-screen overflow-hidden"
-        ref={outerRef}
+        ref={ref}
         style={{ y: positionX2 }}
       >
         <motion.div
@@ -31,7 +31,6 @@ const Hero = forwardRef<HTMLDivElement>(function Hero(_, innerRef) {
             transform: "translateY(-50%)",
             // position: "fixed",
           }}
-          ref={innerRef}
         >
           <motion.div
             className="mb-10 text-6xl text-nowrap"
@@ -68,6 +67,6 @@ const Hero = forwardRef<HTMLDivElement>(function Hero(_, innerRef) {
       </motion.div>
     </>
   );
-});
+}
 
 export default Hero;

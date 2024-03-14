@@ -1,7 +1,9 @@
 import { AnimatePresence, easeOut, motion } from "framer-motion";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, PropsWithChildren, useState } from "react";
 
-function Hamburger({ isVisible }: { isVisible: boolean }) {
+type TrackBallProps = PropsWithChildren<{ isVisible: boolean }>;
+
+function TrackBall({ isVisible, children }: TrackBallProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   console.log(mouseY, "-", mouseX);
@@ -48,29 +50,7 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
               ease: easeOut,
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="48"
-              height="24"
-            >
-              <line
-                x1="-2"
-                y1="16"
-                x2="26"
-                y2="16"
-                stroke="white"
-                strokeWidth="2"
-              />
-              <line
-                x1="-2"
-                y1="8"
-                x2="26"
-                y2="8"
-                stroke="white"
-                strokeWidth="2"
-              />
-            </svg>
+            {children}
           </motion.div>
         </motion.div>
       )}
@@ -78,4 +58,4 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
   );
 }
 
-export default Hamburger;
+export default TrackBall;
