@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  font-family: "Mulish", "Nunito", Helvetica, sans-serif;
+}
+
+header li,
+header span {
+  font-size: 1.2rem;
+}
+
+nav li::after {
+  content: "";
+  background-color: black;
+  height: 0.12rem;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transform-origin: 0% 100%;
+  transition: 0.4s ease-in-out;
+}
+
+nav li:hover::after {
+  transform: scaleX(1);
+}
