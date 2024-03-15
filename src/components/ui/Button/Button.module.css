@@ -1,0 +1,23 @@
+.button:hover::after {
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 50%;
+  content: "";
+  background-color: rgb(203 213 225);
+  width: 120%;
+  height: 120%;
+  animation: fill 0.5s ease-in-out forwards;
+}
+
+@keyframes fill {
+  0% {
+    transform: translateY(0%) translateX(-50%);
+    border-radius: 100%;
+  }
+
+  100% {
+    transform: translateY(-100%) translateX(-50%);
+    border-radius: 15%;
+  }
+}

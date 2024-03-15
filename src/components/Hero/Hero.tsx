@@ -18,7 +18,7 @@ function Hero() {
   return (
     <>
       <motion.div
-        className="h-screen overflow-hidden"
+        className="h-screen overflow-hidden bg-gradient-to-br from-slate-100 to-slate-300"
         ref={ref}
         style={{ y: positionX2 }}
       >

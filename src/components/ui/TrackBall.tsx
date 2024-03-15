@@ -1,15 +1,26 @@
 import { motion } from "framer-motion";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, PropsWithChildren, useState } from "react";
 
-function TrackBall() {
+type TrackBallProps = PropsWithChildren<{
+  size?: number | string;
+  top?: number;
+  right?: number;
+}>;
+
+function TrackBall({
+  children,
+  size = "5rem",
+  top = 350,
+  right = 250,
+}: TrackBallProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   console.log(mouseY, "-", mouseX);
 
   function handleMouseMove(event: MouseEvent<HTMLDivElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
-    setMouseX(((event.clientX - rect.left - rect.width / 2) / rect.width) * 30);
-    setMouseY(((event.clientY - rect.top - rect.width / 2) / rect.height) * 30);
+    setMouseX(((event.clientX - rect.left - rect.width / 2) / rect.width) * 50);
+    setMouseY(((event.clientY - rect.top - rect.width / 2) / rect.height) * 50);
   }
 
   function resetPosition() {
@@ -19,10 +30,8 @@ function TrackBall() {
 
   return (
     <motion.div
-      className="w-20 h-20 rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-30"
-      initial={{ scale: 0 }}
+      className="rounded-full overflow-hidden bg-slate-700 flex justify-center items-center absolute z-30 hover:cursor-pointer"
       animate={{
-        scale: [0, 1.5, 1],
         translateX: mouseX,
         translateY: mouseY,
         transition: {
@@ -32,7 +41,7 @@ function TrackBall() {
           stiffness: 250,
         },
       }}
-      exit={{ scale: 0 }}
+      style={{ width: size, height: size, top, right }}
       onMouseMove={handleMouseMove}
       onMouseLeave={resetPosition}
     >
@@ -43,26 +52,13 @@ function TrackBall() {
         }}
         transition={{
           duration: 0.35,
-          type: "tween",
-          ease: easeOut,
+          type: "spring",
+          damping: 15,
+          stiffness: 150,
         }}
+        className="text-slate-100"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="48"
-          height="24"
-        >
-          <line
-            x1="-2"
-            y1="16"
-            x2="26"
-            y2="16"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <line x1="-2" y1="8" x2="26" y2="8" stroke="white" strokeWidth="2" />
-        </svg>
+        {children}
       </motion.div>
     </motion.div>
   );

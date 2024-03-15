@@ -3,6 +3,7 @@ import imgMusic from "../../assets/images/spotilite-searchpage.webp";
 import imgBooks from "../../assets/images/book_add - Copie.webp";
 import imgKasa from "../../assets/images/_Body.webp";
 import Hero from "../Hero/Hero";
+import Skills from "../Skills/Skills";
 
 const projects = [
   {
@@ -30,6 +31,7 @@ function Main() {
     <main className=" w-full">
       <Hero />
       <Gallery projects={projects} />
+      <Skills />
     </main>
   );
 }

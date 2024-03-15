@@ -1,8 +1,6 @@
-import styles from "./Name.module.css";
-
 function Name() {
   return (
-    <div className={styles.name}>
+    <div>
       <span>© Code by Daniel </span>
       <span>Derudder</span>
     </div>

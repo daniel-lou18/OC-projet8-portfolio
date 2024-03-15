@@ -1,4 +1,4 @@
-import { AnimatePresence, easeOut, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { MouseEvent, useState } from "react";
 
 function Hamburger({ isVisible }: { isVisible: boolean }) {
@@ -21,7 +21,7 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="w-20 h-20 rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-30"
+          className="w-20 h-20 rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-30 hover:cursor-pointer"
           initial={{ scale: 0 }}
           animate={{
             scale: [0, 1.5, 1],
@@ -31,7 +31,7 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
               duration: 0.15,
               type: "spring",
               damping: 15,
-              stiffness: 250,
+              stiffness: 350,
             },
           }}
           exit={{ scale: 0 }}
@@ -45,8 +45,9 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
             }}
             transition={{
               duration: 0.35,
-              type: "tween",
-              ease: easeOut,
+              type: "spring",
+              damping: 15,
+              stiffness: 150,
             }}
           >
             <svg
@@ -56,17 +57,17 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
               height="24"
             >
               <line
-                x1="-2"
+                x1="0"
                 y1="16"
-                x2="26"
+                x2="24"
                 y2="16"
                 stroke="white"
                 strokeWidth="2"
               />
               <line
-                x1="-2"
+                x1="0"
                 y1="8"
-                x2="26"
+                x2="24"
                 y2="8"
                 stroke="white"
                 strokeWidth="2"
