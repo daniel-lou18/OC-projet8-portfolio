@@ -11,7 +11,8 @@ const skills = [
 
 function Skills() {
   return (
-    <div className="bg-slate-200 p-8">
+    <div className="bg-slate-200 py-8 px-16">
+      <h2 className="text-xl">Mon stack</h2>
       <ul>
         {skills.map((skill, id) => (
           <Skill {...skill} key={id} />

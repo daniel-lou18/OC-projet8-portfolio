@@ -1,0 +1,52 @@
+.trackball::after {
+  position: absolute;
+  z-index: -1;
+  top: 110%;
+  left: 50%;
+  content: "";
+  background-color: #1d4ed8;
+  width: 120%;
+  height: 120%;
+}
+
+.trackball:hover::after {
+  animation: fill 0.5s ease-in-out forwards;
+}
+
+.trackball:not(:hover)::after {
+  animation: unfill 0.5s ease-in-out forwards;
+}
+
+.trackball.photo::after {
+  z-index: 30;
+  content: "Contact";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: rgb(241 245 249);
+}
+
+@keyframes fill {
+  0% {
+    transform: translateY(0%) translateX(-50%);
+    border-radius: 100%;
+  }
+
+  100% {
+    transform: translateY(-100%) translateX(-50%);
+    border-radius: 15%;
+  }
+}
+
+@keyframes unfill {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+    border-radius: 15%;
+  }
+
+  100% {
+    transform: translateY(0%) translateX(-50%);
+    border-radius: 100%;
+  }
+}

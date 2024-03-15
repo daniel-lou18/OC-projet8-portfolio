@@ -1,6 +1,6 @@
 import { useScroll, motion, useTransform } from "framer-motion";
 import HorMovText from "../HorizMovText/HorMovText";
-import TrackBall from "../ui/TrackBall";
+import TrackBall from "../ui/TrackBall/TrackBall";
 import { useRef } from "react";
 import Button from "../ui/Button/Button";
 
@@ -22,7 +22,9 @@ function Footer() {
         <h3 className="text-8xl pb-28 border-b-slate-300 border-b-2 border-solid relative">
           Me contacter
         </h3>
-        <TrackBall size="10rem">C'est par ici !</TrackBall>
+        <TrackBall size="10rem" linkTo="/contact" top={350} right={250}>
+          C'est par ici !
+        </TrackBall>
         <div className="flex pt-16 gap-8">
           <Button>info@danielderudder.com</Button>
           <Button>+33 (0)6 58 42 46 50</Button>

@@ -21,12 +21,12 @@ function Gallery({ projects }: GalleryProps) {
 
   return (
     <motion.div
-      className="w-full text-white text-5xl pt-8 bg-slate-950 pb-24 relative z-10"
+      className="w-full text-slate-100 text-5xl pt-8 bg-slate-950 pb-24 relative z-10"
       // style={{ position: relativeOrFixed }}
       ref={ref}
     >
-      <h2 className="text-lg w-fit ml-auto mr-auto text-slate-300">
-        Mes projets
+      <h2 className="text-xl w-fit text-slate-300 pl-16 sticky">
+        Réalisations
       </h2>
       {projects.map((project, id) => (
         <Project {...project} key={id} />

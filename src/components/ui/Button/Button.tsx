@@ -1,13 +1,20 @@
 import { PropsWithChildren } from "react";
-import styles from "./Button.module.css";
+import styles from "./button.module.css";
+import { Link } from "react-router-dom";
 
-function Button({ children }: PropsWithChildren) {
+type ButtonProps = PropsWithChildren<{
+  linkTo?: string;
+}>;
+
+function Button({ children, linkTo = "/" }: ButtonProps) {
   return (
-    <button
-      className={`px-8 py-4 border-slate-300 border-2 border-solid rounded-full relative overflow-hidden ${styles.button}`}
-    >
-      {children}
-    </button>
+    <Link to={linkTo}>
+      <button
+        className={`px-8 py-4 border-slate-300 border-2 border-solid rounded-full relative overflow-hidden ${styles.button}`}
+      >
+        {children}
+      </button>
+    </Link>
   );
 }
 
