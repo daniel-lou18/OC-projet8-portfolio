@@ -23,7 +23,7 @@ function Header() {
       <AnimatePresence>
         {showHeader && (
           <motion.header
-            className="justify-between w-full h-16 top-0 z-20 p-4 pr-8 flex items-center fixed"
+            className="justify-between w-full h-16 top-10 z-20 px-[8%] flex items-center fixed"
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             exit={{ y: -50 }}
