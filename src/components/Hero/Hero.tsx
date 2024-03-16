@@ -4,6 +4,9 @@ import { useRef } from "react";
 import Intro from "./Intro";
 import ScrollDown from "./ScrollDown";
 import LeftHanger from "./LeftHanger";
+import Blob from "../Blob/Blob";
+import PhotoBall from "../ui/TrackBall/PhotoBall";
+import image from "../../assets/images/PHOTO UP-20211120-Vermogen-82.jpg";
 
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -17,6 +20,7 @@ function Hero() {
 
   return (
     <>
+      <Blob />
       <motion.div
         className="h-screen overflow-hidden bg-gradient-to-br from-slate-100 to-slate-300"
         ref={ref}
@@ -25,24 +29,18 @@ function Hero() {
         <motion.div
           className="h-fit flex flex-col gap-10 justify-center items-start relative"
           style={{
-            paddingLeft: "20%",
-            top: "50%",
+            paddingLeft: "8%",
+            top: "55%",
             // left: "25%",
             transform: "translateY(-50%)",
             // position: "fixed",
           }}
         >
           <motion.div
-            className="text-6xl text-nowrap"
-            // style={{ y: positionX2 }}
-          >
-            Daniel Derudder
-          </motion.div>
-          <motion.div
             className="text-5xl text-nowrap"
-            // style={{ y: positionX2 }}
+            style={{ fontFamily: "Bebas Neue" }}
           >
-            <LeftHanger />
+            {/* <LeftHanger /> */}
             <LetterChangeText
               words={[
                 "FULL-STACK",
@@ -56,12 +54,36 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            className="text-6xl text-nowrap w-1/2"
+            className="text-6xl text-nowrap"
+            style={{ fontFamily: "Bebas Neue" }}
+          >
+            Daniel Derudder
+          </motion.div>
+          <motion.div
+            className="text-6xl text-nowrap w-2/3"
             // style={{ y: positionX2 }}
           >
             <Intro />
           </motion.div>
         </motion.div>
+        {/* <motion.div className="flex flex-col gap-16 absolute right-[8%] top-[28%]">
+          <div className="w-[200px] h-[200px] rounded-full flex justify-center items-center bg-slate-300">
+            <div
+              className="w-[100px] h-[100px] border-t-2 border-r-2 border-solid border-slate-600"
+              style={{ transform: "rotate(135deg)" }}
+            ></div>
+          </div>
+
+          <PhotoBall linkTo="/contact" size={200}>
+            <div className="w-[200px] h-[200px] overflow-hidden">
+              <img
+                src={image}
+                className="w-full h-full"
+                style={{ filter: "grayscale(90%)" }}
+              />
+            </div>
+          </PhotoBall>
+        </motion.div> */}
         {/* <HorMovText>Faites défiler vers le bas</HorMovText> */}
         <ScrollDown />
       </motion.div>

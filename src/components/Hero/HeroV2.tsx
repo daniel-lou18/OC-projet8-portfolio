@@ -5,6 +5,7 @@ import Intro from "./Intro";
 import ScrollDown from "./ScrollDown";
 import PhotoBall from "../ui/TrackBall/PhotoBall";
 import image from "../../assets/images/PHOTO UP-20211120-Vermogen-82.jpg";
+import Blob from "../Blob/Blob";
 
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
