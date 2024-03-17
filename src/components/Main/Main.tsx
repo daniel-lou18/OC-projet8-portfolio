@@ -4,6 +4,7 @@ import imgBooks from "../../assets/images/book_add - Copie.webp";
 import imgKasa from "../../assets/images/_Body.webp";
 import Hero from "../Hero/Hero";
 import Skills from "../Skills/Skills";
+import Summary from "../Summary/Summary";
 
 const projects = [
   {
@@ -30,6 +31,7 @@ function Main() {
   return (
     <main className=" w-full">
       <Hero />
+      <Summary />
       <Gallery projects={projects} />
       <Skills />
     </main>

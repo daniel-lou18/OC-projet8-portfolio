@@ -17,7 +17,7 @@ function Hero() {
     offset: ["start start", "end start"],
   });
   // const positionX = useTransform(scrollYProgress, [0, 1], [0, -750]);
-  const positionX2 = useTransform(scrollYProgress, [0, 1], [0, 550]);
+  const positionX2 = useTransform(scrollYProgress, [0, 1], [0, 250]);
   // const positionX3 = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   return (
