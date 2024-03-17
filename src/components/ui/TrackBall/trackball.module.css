@@ -7,14 +7,17 @@
   background-color: #1d4ed8;
   width: 120%;
   height: 120%;
+  animation-play-state: paused;
 }
 
 .trackball:hover::after {
   animation: fill 0.5s ease-in-out forwards;
+  animation-play-state: running;
 }
 
 .trackball:not(:hover)::after {
   animation: unfill 0.5s ease-in-out forwards;
+  animation-play-state: running;
 }
 
 .trackball.photo::after {

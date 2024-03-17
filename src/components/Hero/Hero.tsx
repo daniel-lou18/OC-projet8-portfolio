@@ -7,6 +7,8 @@ import LeftHanger from "./LeftHanger";
 import Blob from "../Blob/Blob";
 import PhotoBall from "../ui/TrackBall/PhotoBall";
 import image from "../../assets/images/PHOTO UP-20211120-Vermogen-82.jpg";
+import Lines from "./Lines";
+import TrackBall from "../ui/TrackBall/TrackBall";
 
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,9 +22,10 @@ function Hero() {
 
   return (
     <>
+      {/* <Lines /> */}
       <Blob />
       <motion.div
-        className="h-screen overflow-hidden bg-gradient-to-br from-slate-100 to-slate-300"
+        className="h-screen overflow-hidden bg-gradient-to-br from-slate-100 to-slate-500"
         ref={ref}
         style={{ y: positionX2 }}
       >
@@ -36,11 +39,8 @@ function Hero() {
             // position: "fixed",
           }}
         >
-          <motion.div
-            className="text-5xl text-nowrap"
-            style={{ fontFamily: "Bebas Neue" }}
-          >
-            {/* <LeftHanger /> */}
+          <motion.div className="text-5xl" style={{ fontFamily: "Bebas Neue" }}>
+            <LeftHanger />
             <LetterChangeText
               words={[
                 "FULL-STACK",
@@ -53,37 +53,59 @@ function Hero() {
               ]}
             />
           </motion.div>
-          <motion.div
-            className="text-6xl text-nowrap"
+          {/* <motion.div
+            className="text-6xl text-nowrap flex gap-8 items-center"
             style={{ fontFamily: "Bebas Neue" }}
           >
             Daniel Derudder
-          </motion.div>
+            <PhotoBall linkTo="/contact" size={100}>
+              <div className="w-[100px] h-[100px] overflow-hidden bg-white opacity-75">
+                <img
+                  src={image}
+                  className="w-full h-full"
+                  style={{ filter: "grayscale(90%)" }}
+                />
+              </div>
+            </PhotoBall>
+          </motion.div> */}
           <motion.div
-            className="text-6xl text-nowrap w-2/3"
+            className="text-6xl text-nowrap w-2/3 relative"
             // style={{ y: positionX2 }}
           >
             <Intro />
           </motion.div>
+          {/* <motion.div className="mr-8">
+            <TrackBall>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-down"
+              >
+                <circle
+                  xmlns="http://www.w3.org/2000/svg"
+                  cx="19"
+                  cy="8"
+                  r="1"
+                />
+                <circle
+                  xmlns="http://www.w3.org/2000/svg"
+                  cx="5"
+                  cy="8"
+                  r="1"
+                />
+                <polyline points="6 14 12 20 18 14" />
+              </svg>
+            </TrackBall>
+          </motion.div> */}
         </motion.div>
-        {/* <motion.div className="flex flex-col gap-16 absolute right-[8%] top-[28%]">
-          <div className="w-[200px] h-[200px] rounded-full flex justify-center items-center bg-slate-300">
-            <div
-              className="w-[100px] h-[100px] border-t-2 border-r-2 border-solid border-slate-600"
-              style={{ transform: "rotate(135deg)" }}
-            ></div>
-          </div>
 
-          <PhotoBall linkTo="/contact" size={200}>
-            <div className="w-[200px] h-[200px] overflow-hidden">
-              <img
-                src={image}
-                className="w-full h-full"
-                style={{ filter: "grayscale(90%)" }}
-              />
-            </div>
-          </PhotoBall>
-        </motion.div> */}
         {/* <HorMovText>Faites défiler vers le bas</HorMovText> */}
         <ScrollDown />
       </motion.div>

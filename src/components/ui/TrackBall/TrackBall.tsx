@@ -7,6 +7,7 @@ type TrackBallProps = PropsWithChildren<{
   size?: number | string;
   top?: number;
   right?: number;
+  left?: number | "";
   linkTo?: string;
 }>;
 
@@ -15,6 +16,7 @@ function TrackBall({
   size = "5rem",
   top = 0,
   right = 0,
+  left = "",
   linkTo = "/",
 }: TrackBallProps) {
   const [mouseX, setMouseX] = useState(0);
@@ -46,7 +48,7 @@ function TrackBall({
             stiffness: 250,
           },
         }}
-        style={{ width: size, height: size, top, right }}
+        style={{ width: size, height: size, top, right, left }}
         onMouseMove={handleMouseMove}
         onMouseLeave={resetPosition}
       >
