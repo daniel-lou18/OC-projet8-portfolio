@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 @tailwind base;
@@ -9,18 +10,19 @@ html,
 *,
 *::before,
 *::after {
-  font-family: Helvetica, sans-serif;
+  font-family: "Inter", Helvetica, sans-serif, "system-ui";
 }
 
 header li,
 header span {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 nav li::after {
+  font-size: 1rem;
   content: "";
-  background-color: black;
-  height: 0.12rem;
+  background-color: rgb(30 41 59);
+  height: 1.5px;
   position: absolute;
   bottom: -0.2rem;
   left: 0;
@@ -36,6 +38,6 @@ nav li:hover::after {
 
 h2 {
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgb(100 116 139);
 }

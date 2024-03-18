@@ -28,10 +28,7 @@ function Header() {
             animate={{ y: 0 }}
             exit={{ y: -50 }}
           >
-            <motion.div
-              className="text-4xl text-nowrap flex gap-8 items-center"
-              style={{ fontFamily: "Bebas Neue" }}
-            >
+            <motion.div style={{ fontFamily: "Bebas Neue" }}>
               <Name />
             </motion.div>
             <Navbar />

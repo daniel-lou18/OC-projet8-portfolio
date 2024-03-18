@@ -12,7 +12,7 @@ const skills = [
 function Skills() {
   return (
     <div className="bg-slate-200 py-8 px-[8%]">
-      <h2 className="text-xl">Mon stack</h2>
+      <h2>Mon stack</h2>
       <ul>
         {skills.map((skill, id) => (
           <Skill {...skill} key={id} />

@@ -53,3 +53,12 @@
     border-radius: 100%;
   }
 }
+
+.trackball {
+  background-color: rgb(51 65 85);
+}
+
+.transparent {
+  background-color: transparent;
+  border: 2px solid rgb(133, 144, 150);
+}

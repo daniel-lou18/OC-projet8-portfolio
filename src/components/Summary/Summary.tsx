@@ -1,10 +1,11 @@
 import Card from "./Card";
+import Links from "./Links";
 
 const cardsData = [
   {
     id: 1,
     title: "Développement web",
-    text: "En plus de formation diplômante de développeur web, j'ai suivi de nombreuses formations Udemy sur le JavaScript, le TypeScript et React. Je travaille en permanence sur des projets personnels.",
+    text: "En plus de formation diplômante de développeur web, j'ai suivi de nombreuses formations (Udemy, App Academy) sur le JavaScript, le TypeScript, React et la programmation fondamentale (LeetCode). Je travaille en permanence sur des projets personnels.",
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ function Summary() {
           <Card key={cardData.id} {...cardData} />
         ))}
       </div>
+      <Links />
     </section>
   );
 }

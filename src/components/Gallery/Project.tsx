@@ -70,7 +70,7 @@ function Project({ title, description, image }: ProjectProps) {
         >
           {title}
         </motion.h3>
-        <div className="overflow-hidden h-[60vh] w-3/5 p-8 rounded-md relative">
+        <div className="overflow-hidden h-[60vh] w-3/5 rounded-md relative shadow-xl">
           <img
             src={image}
             className="w-full h-auto object-cover"
