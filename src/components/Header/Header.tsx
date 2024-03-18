@@ -10,8 +10,8 @@ function Header() {
 
   useEffect(() => {
     function toggleHamburger() {
-      window.scrollY > 350 ? setShowHamburger(true) : setShowHamburger(false);
-      window.scrollY < 250 ? setShowHeader(true) : setShowHeader(false);
+      window.scrollY > 150 ? setShowHamburger(true) : setShowHamburger(false);
+      window.scrollY < 50 ? setShowHeader(true) : setShowHeader(false);
     }
     window.addEventListener("scroll", toggleHamburger);
 
@@ -23,10 +23,11 @@ function Header() {
       <AnimatePresence>
         {showHeader && (
           <motion.header
-            className="justify-between w-full h-16 top-10 z-20 px-[8%] flex items-center fixed"
-            initial={{ y: -50 }}
+            className="justify-between w-full h-16 top-8 z-20 px-[8%] flex items-center fixed"
+            initial={{ y: -125 }}
             animate={{ y: 0 }}
-            exit={{ y: -50 }}
+            exit={{ y: -125 }}
+            transition={{ damping: 50, stiffness: 200 }}
           >
             <motion.div style={{ fontFamily: "Bebas Neue" }}>
               <Name />

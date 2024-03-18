@@ -1,20 +1,50 @@
-import TrackBall from "../ui/TrackBall/TrackBall";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 function LeftHanger() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start start"],
+  });
+  const position = useTransform(scrollYProgress, [0.4, 1], [0, 450]);
+
+  const variantsContainer = {
+    narrow: {
+      width: "8rem",
+    },
+    wide: {
+      width: "20rem",
+      transition: {
+        type: "tween",
+        delay: 0.1,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const variantsText = {
+    narrow: {
+      opacity: 0,
+    },
+    wide: {
+      opacity: 1,
+    },
+    transition: {
+      type: "tween",
+      delay: 0.5,
+      ease: "easeOut",
+    },
+  };
+
   return (
     <motion.div
       className="h-28 bg-slate-800 rounded-l-full absolute right-0 flex gap-4 items-center justify-start pl-4 top-[10%]"
-      style={{ fontFamily: "Mulish", fontSize: "1rem" }}
-      initial={{ width: "8rem" }}
-      whileHover={{
-        width: "20rem",
-        transition: {
-          type: "tween",
-          delay: 0.1,
-          ease: "easeOut",
-        },
-      }}
+      style={{ x: position }}
+      initial="narrow"
+      whileHover="wide"
+      variants={variantsContainer}
+      ref={ref}
     >
       <div className="relative w-[85px] h-[85px] rounded-full bg-slate-700 shrink-0 flex justify-center items-center">
         <svg
@@ -28,12 +58,10 @@ function LeftHanger() {
         </svg>
       </div>
       <motion.h4
-        className="text-slate-100"
-        style={{ width: "calc(100% - 85px)" }}
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
+        className="text-slate-100 absolute w-96 left-28 overflow-hidden"
+        variants={variantsText}
       >
-        Titre professionnel niveau 5 Développeur web
+        Titre professionnel niv. 5 <br /> Développeur web
       </motion.h4>
     </motion.div>
   );

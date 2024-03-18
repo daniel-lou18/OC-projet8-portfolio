@@ -19,60 +19,66 @@ function Name() {
         initial="hidden"
         whileHover="visible"
       >
-        <PhotoBall linkTo="/" size={75}>
-          <div className="w-[75px] h-[75px] overflow-hidden bg-white opacity-75">
-            <motion.img
-              src={image}
-              className="w-full h-full"
-              initial={{ filter: "grayscale(80%)" }}
-              whileHover={{ filter: "grayscale(0%)" }}
-            />
-          </div>
-        </PhotoBall>
+        <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-white opacity-75">
+          <motion.img
+            src={image}
+            className="w-full h-full"
+            initial={{ filter: "grayscale(80%)" }}
+            whileHover={{ filter: "grayscale(0%)" }}
+          />
+        </div>
         <span>© Daniel</span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.2 }}
         >
           D
         </motion.span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.2 }}
         >
           e
         </motion.span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.2 }}
         >
           r
         </motion.span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.3 }}
         >
           u
         </motion.span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.4 }}
         >
           d
         </motion.span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.5 }}
         >
           d
         </motion.span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.6 }}
         >
           e
         </motion.span>
         <motion.span
+          className="w-fit"
           variants={variants}
           transition={{ type: "spring", duration: 0.7 }}
         >

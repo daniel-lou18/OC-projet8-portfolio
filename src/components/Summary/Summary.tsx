@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import Card from "./Card";
 import Links from "./Links";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 const cardsData = [
   {
@@ -20,8 +22,19 @@ const cardsData = [
 ];
 
 function Summary() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const position = useTransform(scrollYProgress, [0, 0.5], [0, -150]);
+
   return (
-    <section className="h-screen w-full py-64 px-[8%]">
+    <motion.section
+      className="h-screen w-full pt-32 px-[8%]"
+      ref={ref}
+      style={{ y: position }}
+    >
       <h2 className="mb-12">A propos</h2>
       <div className="grid grid-cols-3 gap-16">
         {cardsData.map((cardData) => (
@@ -29,7 +42,7 @@ function Summary() {
         ))}
       </div>
       <Links />
-    </section>
+    </motion.section>
   );
 }
 

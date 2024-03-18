@@ -32,7 +32,10 @@ function LetterChangeText({ words }: { words: string[] }) {
     return () => clearInterval(bigInterval);
   }, [words]);
   return (
-    <div className="text-8xl font-extrabold">
+    <div
+      className="text-9xl font-extrabold"
+      style={{ fontFamily: "Bebas Neue" }}
+    >
       <div>DÉVELOPPEUR </div>
       <div ref={wordRef} className="whitespace-nowrap">
         {words[0]}

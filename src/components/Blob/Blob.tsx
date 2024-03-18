@@ -12,6 +12,7 @@ function Blob() {
 
   useEffect(() => {
     function handleMouseMove(e: MouseEvent) {
+      if (e.pageY > window.innerHeight) return;
       mouseX.set(e.pageX - size / 2);
       mouseY.set(e.pageY - size / 2);
     }
@@ -23,14 +24,18 @@ function Blob() {
   return (
     <div className="relative inset-0 blur-3xl">
       <motion.div
-        className="bg-gradient-to-r from-sky-400 to-emerald-600 rounded-full absolute blob-element opacity-50"
+        className="bg-gradient-to-r from-orange-400 to-red-600 rounded-full absolute blob-element opacity-50"
         style={{
           x: springX,
           y: springY,
           width: size,
           height: size,
         }}
-        animate={{ rotate: [0, 360], scale: [1, 1.5, 1] }}
+        animate={{
+          rotate: [0, 360],
+          scaleX: [1, 1.5, 1],
+          scaleY: [1.25, 1, 1.25],
+        }}
         transition={{
           duration: 15,
           repeat: Infinity,

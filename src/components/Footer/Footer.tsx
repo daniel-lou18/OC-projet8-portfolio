@@ -19,7 +19,7 @@ function Footer() {
       style={{ y: scrollY }}
     >
       <div className="px-[8%] w-full">
-        <h2 className="text-8xl pb-28 border-b-slate-300 border-b-2 border-solid relative">
+        <h2 className="text-8xl pb-28 border-b-slate-300 border-b-2 border-solid relative contact-title">
           Me contacter
         </h2>
         <TrackBall size="10rem" linkTo="/contact" top={350} right={250}>
