@@ -4,24 +4,24 @@ const cardsData = [
   {
     id: 1,
     title: "Développement web",
-    text: "I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations, transitions and interaction.",
+    text: "En plus de formation diplômante de développeur web, j'ai suivi de nombreuses formations Udemy sur le JavaScript, le TypeScript et React. Je travaille en permanence sur des projets personnels.",
   },
   {
     id: 2,
-    title: "Expérience professionnelle",
-    text: "With a solid track record in designing websites and apps, I deliver strong and user-friendly digital designs. Solid company branding is the foundation of any succesful website.",
+    title: "Expérience",
+    text: "J'ai plus de 10 ans d'expérience professionnelle en tant que traducteur indépendant français-néerlandais. Je parle également couramment l'anglais.",
   },
   {
     id: 3,
-    title: "Objectif professionnel",
-    text: "A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.",
+    title: "Objectif",
+    text: "Mon objectif est une reconversion professionnelle orientée vers le développement web et mobile. Je suis impatient de mettre en pratique mes compétences qui évoluent continuellement.",
   },
 ];
 
 function Summary() {
   return (
-    <section className="h-screen w-full pt-96 px-[8%]">
-      <h2>A propos</h2>
+    <section className="h-screen w-full py-64 px-[8%]">
+      <h2 className="mb-12">A propos</h2>
       <div className="grid grid-cols-3 gap-16">
         {cardsData.map((cardData) => (
           <Card key={cardData.id} {...cardData} />
