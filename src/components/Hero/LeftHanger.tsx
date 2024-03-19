@@ -39,14 +39,14 @@ function LeftHanger() {
 
   return (
     <motion.div
-      className="h-28 bg-slate-800 rounded-l-full absolute right-0 flex gap-4 items-center justify-start pl-4 top-[10%]"
+      className="h-28 bg-gray-800 rounded-l-full absolute right-0 flex gap-4 items-center justify-start pl-4 top-[10%]"
       style={{ x: position }}
       initial="narrow"
       whileHover="wide"
       variants={variantsContainer}
       ref={ref}
     >
-      <div className="relative w-[85px] h-[85px] rounded-full bg-slate-700 shrink-0 flex justify-center items-center">
+      <div className="relative w-[85px] h-[85px] rounded-full bg-gray-700 shrink-0 flex justify-center items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="48"

@@ -14,12 +14,12 @@ function Footer() {
 
   return (
     <motion.footer
-      className="h-screen w-full bg-slate-200 pt-56 relative overflow-hidden"
+      className="h-screen w-full bg-neutral-100 pt-56 relative overflow-hidden"
       ref={footerRef}
       style={{ y: scrollY }}
     >
       <div className="px-[8%] w-full">
-        <h2 className="text-8xl pb-28 border-b-slate-300 border-b-2 border-solid relative contact-title">
+        <h2 className="text-8xl pb-28 border-b-neutral-300 border-b-2 border-solid relative contact-title">
           Me contacter
         </h2>
         <TrackBall size="10rem" linkTo="/contact" top={350} right={250}>

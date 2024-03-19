@@ -8,7 +8,7 @@ type SkillProps = {
 
 function Skill({ name, rating }: SkillProps) {
   return (
-    <li className="grid grid-cols-2 py-12 h-36 border-t-2 border-slate-300 border-solid">
+    <li className="grid grid-cols-2 py-12 h-36 border-t-2 border-neutral-300 border-solid">
       <SkillName name={name} />
       <SkillBar rating={rating} />
     </li>

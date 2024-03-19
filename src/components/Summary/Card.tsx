@@ -10,7 +10,7 @@ function Card({ id, title, text }: CardProps) {
   return (
     <article>
       <Reveal>
-        <div className="text-slate-500 pb-6 border-b-2 border-solid border-slate-300">
+        <div className="text-neutral-500 pb-6 border-b-2 border-solid border-neutral-300">
           {"0" + id}
         </div>
       </Reveal>

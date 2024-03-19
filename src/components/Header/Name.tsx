@@ -19,7 +19,7 @@ function Name() {
         initial="hidden"
         whileHover="visible"
       >
-        <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-white opacity-75">
+        <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-white opacity-75">
           <motion.img
             src={image}
             className="w-full h-full"

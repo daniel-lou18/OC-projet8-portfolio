@@ -67,7 +67,7 @@ function TrackBall({
             damping: 15,
             stiffness: 150,
           }}
-          className="text-slate-100"
+          className="text-neutral-100"
         >
           {children}
         </motion.div>

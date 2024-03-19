@@ -16,7 +16,7 @@ function AppLayout() {
   }, []);
 
   return (
-    <div className="text-slate-800">
+    <div className="text-slate-950">
       <Header />
       <Outlet />
     </div>

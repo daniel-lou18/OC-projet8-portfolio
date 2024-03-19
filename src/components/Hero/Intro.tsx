@@ -1,8 +1,8 @@
 function Intro() {
   return (
-    <p className="text-2xl leading-normal w-full text-wrap">
-      Développeur front-end trilingue sur Paris et toute la France, je crée &
-      conçois des sites internet et applications sur mesure.
+    <p className="text-lg leading-normal w-full text-wrap uppercase">
+      Développeur front-end trilingue sur Paris, je crée des sites internet et
+      applications web.
     </p>
   );
 }

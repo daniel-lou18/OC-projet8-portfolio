@@ -17,22 +17,28 @@ function Hero() {
 
   return (
     <>
-      <Blob />
+      {/* <Blob /> */}
       <motion.div
         className="h-screen w-full overflow-hidden"
         ref={ref}
         // style={{ y: positionX2 }}
       >
         <motion.div
-          className="h-fit flex flex-col gap-16 justify-center items-start relative"
+          className="h-fit relative"
           style={{
-            paddingLeft: "7%",
-            top: "57%",
+            paddingLeft: "8%",
+            top: "60%",
             transform: "translateY(-50%)",
           }}
         >
-          <div>
-            {/* <LeftHanger /> */}
+          <div
+            className="text-8xl leading-none font-extrabold relative left-[15%]"
+            // style={{ fontFamily: "Bebas Neue" }}
+          >
+            DÉVELOPPEUR
+          </div>
+          <div className="relative left-[20%]">
+            <LeftHanger />
             <LetterChangeText
               words={[
                 "FULL-STACK",
@@ -45,13 +51,16 @@ function Hero() {
               ]}
             />
           </div>
+          <div
+            className="text-8xl leading-none font-extrabold relative left-[15%] flex"
+            // style={{ fontFamily: "Bebas Neue" }}
+          >
+            DANIEL DERUDDER
+            {/* <motion.div className="w-[40%] relative">
+              <Intro />
+            </motion.div> */}
+          </div>
         </motion.div>
-        <motion.div className="w-[23%] relative left-[72%] top-[24%]">
-          <Intro />
-        </motion.div>
-        <div className="text-[7rem] font-bold tracking-tighter relative left-[30%] top-[20%]">
-          DANIEL DERUDDER
-        </div>
         <motion.div style={{ opacity: scrollOpacity }}>
           <ScrollDown />
         </motion.div>
