@@ -41,7 +41,7 @@ function TrackBall({
   return (
     <Link to={linkTo}>
       <motion.div
-        className={`rounded-full overflow-hidden flex justify-center items-center hover:cursor-pointer z-30 ${styles.trackball} ${styles[style]}`}
+        className={`hidden md:flex rounded-full overflow-hidden justify-center items-center hover:cursor-pointer z-30 ${styles.trackball} ${styles[style]}`}
         animate={{
           translateX: mouseX,
           translateY: mouseY,

@@ -20,23 +20,29 @@ function Header() {
 
   return (
     <>
-      <AnimatePresence>
-        {showHeader && (
-          <motion.header
-            className="justify-between w-full h-16 top-8 z-20 px-[8%] flex items-center fixed"
-            initial={{ y: -125 }}
-            animate={{ y: 0 }}
-            exit={{ y: -125 }}
-            transition={{ damping: 50, stiffness: 200 }}
-          >
-            <motion.div style={{ fontFamily: "Bebas Neue" }}>
+      <div className="lg:block hidden">
+        <AnimatePresence>
+          {showHeader && (
+            <motion.header
+              className="justify-between w-full h-16 top-4 z-20 px-[8%] flex items-center fixed"
+              initial={{ y: -125 }}
+              animate={{ y: 0 }}
+              exit={{ y: -125 }}
+              transition={{ damping: 50, stiffness: 200 }}
+            >
               <Name />
-            </motion.div>
-            <Navbar />
-          </motion.header>
-        )}
-      </AnimatePresence>
-      <Hamburger isVisible={showHamburger} />
+              <Navbar />
+            </motion.header>
+          )}
+        </AnimatePresence>
+        <Hamburger isVisible={showHamburger} />
+      </div>
+      <div className="lg:hidden flex justify-between items-center fixed">
+        <div className="relative top-12 left-4">
+          <Name />
+        </div>
+        <Hamburger isVisible={true} size={70} />
+      </div>
     </>
   );
 }

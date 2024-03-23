@@ -33,11 +33,11 @@ function LetterChangeText({ words }: { words: string[] }) {
   }, [words]);
   return (
     <div
-      className="text-[6rem] font-bold tracking-tighter"
+      className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter"
       // style={{ fontFamily: "Bebas Neue" }}
     >
       <div>DÉVELOPPEUR </div>
-      <div ref={wordRef} className="-mt-16 relative">
+      <div ref={wordRef} className="relative">
         {words[0]}
       </div>
     </div>

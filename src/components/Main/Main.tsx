@@ -30,7 +30,7 @@ const projects = [
 
 function Main() {
   return (
-    <main className={`w-full`}>
+    <main className="w-full bg-gradient-to-br from-neutral-100 to-neutral-300">
       <div className={`overflow-hidden ${styles.main}`}>
         <div className={`${styles.main} ${styles.main2} relative`}>
           <Hero />

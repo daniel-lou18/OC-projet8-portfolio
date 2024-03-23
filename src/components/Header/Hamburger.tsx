@@ -1,10 +1,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { MouseEvent, useState } from "react";
 
-function Hamburger({ isVisible }: { isVisible: boolean }) {
+type HamburgerProps = {
+  isVisible: boolean;
+  size?: number;
+};
+
+function Hamburger({ isVisible, size = 80 }: HamburgerProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  console.log(mouseY, "-", mouseX);
 
   function handleMouseMove(event: MouseEvent<HTMLDivElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -21,7 +25,8 @@ function Hamburger({ isVisible }: { isVisible: boolean }) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="w-20 h-20 rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-30 hover:cursor-pointer"
+          className={`rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-30 hover:cursor-pointer`}
+          style={{ width: `${size}px`, height: `${size}px` }}
           initial={{ scale: 0 }}
           animate={{
             scale: [0, 1.5, 1],

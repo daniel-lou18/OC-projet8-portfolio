@@ -58,19 +58,19 @@ function Project({ title, description, image }: ProjectProps) {
   };
 
   return (
-    <div className="relative mt-16 w-full h-[70vh] overflow-hidden">
+    <div className="relative mt-16 p-4 md:p-0 w-full h-[70vh] overflow-hidden">
       <motion.div
-        className="w-full flex justify-center items-center relative"
+        className="w-full md:flex justify-center items-center relative"
         style={{ scale: scrollY2, filter: scrollBlur }}
         ref={ref}
       >
         <motion.h3
-          className="text-6xl font-bold mb-4 absolute left-40 z-20 whitespace-pre-wrap w-96"
+          className="text-4xl md:text-6xl font-bold mb-4 absolute top-8 md:top-1/3 md:left-40 z-20 whitespace-pre-wrap w-96"
           style={{ y: scrollYTitle, scale: scrollY2 }}
         >
           {title}
         </motion.h3>
-        <div className="overflow-hidden h-[60vh] w-3/5 rounded-md relative shadow-xl">
+        <div className="overflow-hidden md:h-[60vh] md:w-3/5 rounded-md relative shadow-xl">
           <img
             src={image}
             className="w-full h-auto object-cover"
@@ -79,15 +79,11 @@ function Project({ title, description, image }: ProjectProps) {
         </div>
       </motion.div>
       <motion.div
-        className="absolute left-[65%] top-32"
+        className="w-4/5 top-[30%] md:w-[22%] p-6 xl:p-8 absolute md:left-[65%] md:top-32 rounded-2xl overflow-hidden"
         style={{
           backgroundColor: "rgba(255,255,255,0.2)",
-          width: "22%",
-          padding: "2rem",
-          borderRadius: "1rem",
-          overflow: "hidden",
           backdropFilter: backdropBlur,
-          scale: scrollY,
+          scale: scrollY2,
         }}
         initial="offscreen"
         whileInView="onscreen"
@@ -99,7 +95,7 @@ function Project({ title, description, image }: ProjectProps) {
             filter: scrollBlur,
           }}
         >
-          <p className="text-base">{description}</p>
+          <p className="text-sm xl:text-base">{description}</p>
           <div className="flex justify-end gap-4 h-6">
             <span className="text-xl hover:scale-125 hover:cursor-pointer transition delay-100 duration-250 ease-in-out">
               <svg

@@ -22,7 +22,7 @@ function Blob() {
   }, [mouseX, mouseY]);
 
   return (
-    <div className="relative inset-0 blur-3xl">
+    <div className="relative inset-0 blur-3xl lg:block hidden">
       <motion.div
         className="bg-gradient-to-r from-neutral-400 to-amber-300 rounded-full absolute blob-element opacity-50"
         style={{
