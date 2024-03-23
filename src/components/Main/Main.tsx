@@ -5,6 +5,7 @@ import imgKasa from "../../assets/images/_Body.webp";
 import Hero from "../Hero/Hero";
 import Skills from "../Skills/Skills";
 import Summary from "../Summary/Summary";
+import styles from "./main.module.css";
 
 const projects = [
   {
@@ -29,9 +30,11 @@ const projects = [
 
 function Main() {
   return (
-    <main className=" w-full">
-      <div className="overflow-hidden">
-        <Hero />
+    <main className={`w-full`}>
+      <div className={`overflow-hidden ${styles.main}`}>
+        <div className={`${styles.main} ${styles.main2} relative`}>
+          <Hero />
+        </div>
         <Summary />
       </div>
       <Gallery projects={projects} />

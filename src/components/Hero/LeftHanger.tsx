@@ -7,7 +7,7 @@ function LeftHanger() {
     target: ref,
     offset: ["start end", "start start"],
   });
-  const position = useTransform(scrollYProgress, [0.4, 1], [0, 450]);
+  const position = useTransform(scrollYProgress, [0.7, 1], [0, 450]);
 
   const variantsContainer = {
     narrow: {
@@ -39,7 +39,7 @@ function LeftHanger() {
 
   return (
     <motion.div
-      className="h-28 bg-gray-800 rounded-l-full absolute right-0 flex gap-4 items-center justify-start pl-4 top-[10%]"
+      className="h-28 bg-gray-800 rounded-l-full absolute right-0 flex gap-4 items-center justify-start pl-4 top-[-30%]"
       style={{ x: position }}
       initial="narrow"
       whileHover="wide"
