@@ -1,12 +1,15 @@
-.button:hover::after {
+.button::after {
   position: absolute;
   z-index: -1;
   top: 100%;
   left: 50%;
   content: "";
-  background-color: rgb(203 213 225);
+  background-color: #6b7280;
   width: 120%;
   height: 120%;
+}
+
+.button:hover::after {
   animation: fill 0.5s ease-in-out forwards;
 }
 
@@ -20,4 +23,16 @@
     transform: translateY(-100%) translateX(-50%);
     border-radius: 15%;
   }
+}
+
+.bigPill {
+  height: 60px;
+}
+
+.bigRound {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

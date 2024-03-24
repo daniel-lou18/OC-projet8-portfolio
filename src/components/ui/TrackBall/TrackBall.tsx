@@ -7,7 +7,7 @@ type TrackBallProps = PropsWithChildren<{
   size?: number | string;
   style?: string;
   linkTo?: string;
-  coords?: {};
+  coords?: object;
 }>;
 
 function TrackBall({

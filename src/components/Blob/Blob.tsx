@@ -24,7 +24,7 @@ function Blob() {
   return (
     <div className="relative inset-0 blur-3xl lg:block hidden">
       <motion.div
-        className="bg-gradient-to-r from-neutral-400 to-amber-300 rounded-full absolute blob-element opacity-50"
+        className="bg-gradient-to-r from-purple-400 via-red-400 to-amber-400 rounded-full absolute blob-element opacity-50"
         style={{
           x: springX,
           y: springY,

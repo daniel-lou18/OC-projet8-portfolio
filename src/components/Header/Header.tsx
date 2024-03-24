@@ -37,8 +37,8 @@ function Header() {
         </AnimatePresence>
         <Hamburger isVisible={showHamburger} />
       </div>
-      <div className="lg:hidden flex justify-between items-center fixed">
-        <div className="relative top-12 left-4">
+      <div className="lg:hidden flex justify-between items-center fixed z-50 pl-[8%] pt-8">
+        <div className="h-[70px] flex items-center">
           <Name />
         </div>
         <Hamburger isVisible={true} size={70} />

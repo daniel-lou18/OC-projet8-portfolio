@@ -12,6 +12,17 @@ function Name() {
       bounce: 1,
     },
   };
+
+  const wordVariants = {
+    hidden: { width: "0%" },
+    visible: {
+      width: "100%",
+      transition: {
+        type: "tween",
+        duration: 2,
+      },
+    },
+  };
   return (
     <Link to="/">
       <motion.div
@@ -19,7 +30,7 @@ function Name() {
         initial="hidden"
         whileHover="visible"
       >
-        <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-white opacity-75 lg:block hidden">
+        <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-white opacity-75 lg:block hidden shrink-0">
           <motion.img
             src={image}
             className="w-full h-full"
@@ -27,60 +38,91 @@ function Name() {
             whileHover={{ filter: "grayscale(0%)" }}
           />
         </div>
-        <span>© Daniel</span>
+        <motion.div className="overflow-hidden" variants={wordVariants}>
+          <span>D</span>
+          <motion.span
+            className="w-fit"
+            variants={variants}
+            transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
+          >
+            a
+          </motion.span>
+          <motion.span
+            className="w-fit"
+            variants={variants}
+            transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
+          >
+            n
+          </motion.span>
+          <motion.span
+            className="w-fit"
+            variants={variants}
+            transition={{ type: "spring", duration: 0.3 }}
+          >
+            i
+          </motion.span>
+          <motion.span
+            className="w-fit"
+            variants={variants}
+            transition={{ type: "spring", duration: 0.4 }}
+          >
+            e
+          </motion.span>
+          <motion.span
+            className="w-fit"
+            variants={variants}
+            transition={{ type: "spring", duration: 0.5 }}
+          >
+            l
+          </motion.span>
+        </motion.div>
+        <span>D</span>
         <motion.span
           className="w-fit"
           variants={variants}
-          transition={{ type: "spring", duration: 0.2 }}
-        >
-          D
-        </motion.span>
-        <motion.span
-          className="w-fit"
-          variants={variants}
-          transition={{ type: "spring", duration: 0.2 }}
+          transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
         >
           e
         </motion.span>
         <motion.span
           className="w-fit"
           variants={variants}
-          transition={{ type: "spring", duration: 0.2 }}
+          transition={{ type: "spring", delay: 0.2, duration: 0.2 }}
         >
           r
         </motion.span>
         <motion.span
           className="w-fit"
           variants={variants}
-          transition={{ type: "spring", duration: 0.3 }}
+          transition={{ type: "spring", delay: 0.2, duration: 0.3 }}
         >
           u
         </motion.span>
         <motion.span
           className="w-fit"
           variants={variants}
-          transition={{ type: "spring", duration: 0.4 }}
+          transition={{ type: "spring", delay: 0.2, duration: 0.4 }}
         >
           d
         </motion.span>
         <motion.span
           className="w-fit"
           variants={variants}
-          transition={{ type: "spring", duration: 0.5 }}
+          transition={{ type: "spring", delay: 0.2, duration: 0.5 }}
         >
           d
         </motion.span>
         <motion.span
           className="w-fit"
           variants={variants}
-          transition={{ type: "spring", duration: 0.6 }}
+          transition={{ type: "spring", delay: 0.2, duration: 0.6 }}
         >
           e
         </motion.span>
         <motion.span
           className="w-fit"
           variants={variants}
-          transition={{ type: "spring", duration: 0.7 }}
+          transition={{ type: "spring", delay: 0.2, duration: 0.7 }}
         >
           r
         </motion.span>

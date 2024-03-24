@@ -1,6 +1,5 @@
 .bounce {
   position: relative;
-  bottom: 5%;
 
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
