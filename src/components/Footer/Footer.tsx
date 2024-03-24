@@ -22,7 +22,7 @@ function Footer() {
         <h2 className="text-4xl md:text-8xl pb-28 border-b-neutral-300 border-b-2 border-solid relative contact-title">
           Me contacter
         </h2>
-        <TrackBall size="10rem" linkTo="/contact" top={350} right={250}>
+        <TrackBall size="10rem" linkTo="/contact">
           C'est par ici !
         </TrackBall>
         <div className="flex flex-col md:flex-row pt-16 gap-8">

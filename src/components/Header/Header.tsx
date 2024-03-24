@@ -21,7 +21,7 @@ function Header() {
   return (
     <>
       <div className="lg:block hidden">
-        <AnimatePresence>
+        <AnimatePresence initial={false}>
           {showHeader && (
             <motion.header
               className="justify-between w-full h-16 top-4 z-20 px-[8%] flex items-center fixed"

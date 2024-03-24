@@ -5,9 +5,9 @@ import Intro from "./Intro";
 import ScrollDown from "./ScrollDown";
 import LeftHanger from "./LeftHanger";
 import Blob from "../Blob/Blob";
-import Shape from "./Shape";
 import TrackBall from "../ui/TrackBall/TrackBall";
 import Button from "../ui/Button/Button";
+import Reveal from "../ui/Reveal/Reveal";
 
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -15,23 +15,18 @@ function Hero() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const positionX2 = useTransform(scrollYProgress, [0, 0.4], [0, -1500]);
   const scrollOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
 
   return (
     <>
       <Blob />
-      <motion.div className="h-screen w-full overflow-hidden" ref={ref}>
-        <motion.div
-          className="h-fit flex flex-col gap-24 md:gap-12 justify-center items-start relative md:border-b-2 md:border-solid md:border-neutral-300 pb-24 mx-4"
-          style={{
-            margin: "0 8%",
-            top: "55%",
-            transform: "translateY(-50%)",
-          }}
-        >
-          {/* <LeftHanger /> */}
-          <div>
+      {/* <LeftHanger /> */}
+      <motion.div
+        className="h-screen w-full overflow-hidden pt-[15%]"
+        ref={ref}
+      >
+        <div className="h-fit mx-[8%] flex flex-col gap-24 md:gap-12 pb-24">
+          <Reveal>
             <LetterChangeText
               words={[
                 "FULL-STACK",
@@ -43,23 +38,28 @@ function Hero() {
                 "NODE JS",
               ]}
             />
-          </div>
-          <motion.div>
+          </Reveal>
+          <Reveal>
             <Intro />
-          </motion.div>
-        </motion.div>
-        {/* <div className="text-[7rem] font-bold tracking-tighter relative left-[30%] top-[40%]">
-          DANIEL DERUDDER
-        </div> */}
-        <motion.div style={{ opacity: scrollOpacity }}>
-          <ScrollDown />
-        </motion.div>
-        <div className="relative left-8 md:left-32 top-[290px]">
-          <Button>Télécharger mon CV</Button>
+          </Reveal>
         </div>
-        <TrackBall size={150} top={552} right={175}>
-          WORKS
-        </TrackBall>
+        <div className="flex justify-between mx-[8%] border-t-2 border-solid border-neutral-300">
+          <Reveal style="fit">
+            <div className="relative left-8 md:left-0 top-[40px]">
+              <Button>Télécharger mon CV</Button>
+            </div>
+          </Reveal>
+          <motion.div style={{ opacity: scrollOpacity }}>
+            <Reveal>
+              <ScrollDown />
+            </Reveal>
+          </motion.div>
+          <Reveal style="fit">
+            <TrackBall size={150} coords={{ top: -80 }}>
+              RÉALISATIONS
+            </TrackBall>
+          </Reveal>
+        </div>
       </motion.div>
     </>
   );

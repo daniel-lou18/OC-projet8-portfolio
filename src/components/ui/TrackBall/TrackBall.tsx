@@ -6,22 +6,16 @@ import { Link } from "react-router-dom";
 type TrackBallProps = PropsWithChildren<{
   size?: number | string;
   style?: string;
-  position?: string;
-  top?: number;
-  right?: number;
-  left?: number | "";
   linkTo?: string;
+  coords?: {};
 }>;
 
 function TrackBall({
   children,
   size = "5rem",
   style = "",
-  position = "absolute",
-  top = 0,
-  right = 0,
-  left = "",
   linkTo = "/",
+  coords,
 }: TrackBallProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
@@ -41,7 +35,7 @@ function TrackBall({
   return (
     <Link to={linkTo}>
       <motion.div
-        className={`hidden md:flex rounded-full overflow-hidden justify-center items-center hover:cursor-pointer z-30 ${styles.trackball} ${styles[style]}`}
+        className={`relative flex rounded-full overflow-hidden justify-center items-center hover:cursor-pointer z-30 ${styles.trackball} ${styles[style]}`}
         animate={{
           translateX: mouseX,
           translateY: mouseY,
@@ -52,7 +46,7 @@ function TrackBall({
             stiffness: 250,
           },
         }}
-        style={{ width: size, height: size, top, right, left, position }}
+        style={{ width: size, height: size, ...coords }}
         onMouseMove={handleMouseMove}
         onMouseLeave={resetPosition}
       >

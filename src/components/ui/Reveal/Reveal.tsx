@@ -1,9 +1,13 @@
 import { PropsWithChildren } from "react";
 import { motion } from "framer-motion";
 
-function Reveal({ children }: PropsWithChildren) {
+type RevealProps = PropsWithChildren<{
+  style?: string;
+}>;
+
+function Reveal({ children, style = "full" }: RevealProps) {
   return (
-    <div className="w-full relative">
+    <div className={`${style === "full" ? "w-full" : "w-fit"} relative`}>
       <motion.div
         initial={{ opacity: 0, y: 75 }}
         whileInView={{ opacity: 1, y: 0 }}
