@@ -3,6 +3,7 @@ import HorMovText from "../HorizMovText/HorMovText";
 import TrackBall from "../ui/TrackBall/TrackBall";
 import { useRef } from "react";
 import Button from "../ui/Button/Button";
+import Line from "../ui/Line";
 
 function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -10,7 +11,8 @@ function Footer() {
     target: footerRef,
     offset: ["start end", "start start"],
   });
-  const scrollY = useTransform(scrollYProgress, [0.5, 1], [200, 0]);
+  const scrollY = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  const scrollBall = useTransform(scrollYProgress, [0, 1], ["-70%", "-10%"]);
 
   return (
     <motion.footer
@@ -19,13 +21,20 @@ function Footer() {
       style={{ y: scrollY }}
     >
       <div className="px-[8%] w-full">
-        <h2 className="text-4xl md:text-8xl pb-28 border-b-neutral-300 border-b-2 border-solid relative contact-title">
+        <h2 className="text-4xl md:text-8xl pb-28 relative contact-title">
           Me contacter
         </h2>
-        <TrackBall size="10rem" linkTo="/contact">
-          C'est par ici !
-        </TrackBall>
-        <div className="flex flex-col md:flex-row pt-16 gap-8">
+        <Line>
+          <TrackBall
+            size="10rem"
+            linkTo="/contact"
+            position="absolute"
+            coords={{ top: 0, right: 0, y: "-50%", x: scrollBall }}
+          >
+            C'est par ici !
+          </TrackBall>
+        </Line>
+        <div className="flex flex-col md:flex-row pt-28 md:pt-16 gap-8">
           <Button>info@danielderudder.com</Button>
           <Button>+33 (0)6 58 42 46 50</Button>
         </div>

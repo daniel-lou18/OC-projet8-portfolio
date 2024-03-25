@@ -13,6 +13,10 @@
   animation: fill 0.5s ease-in-out forwards;
 }
 
+.button:not(:hover)::after {
+  animation: unfill 0.3s ease-in-out;
+}
+
 @keyframes fill {
   0% {
     transform: translateY(0%) translateX(-50%);
@@ -25,7 +29,24 @@
   }
 }
 
+@keyframes unfill {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+    border-radius: 15%;
+  }
+
+  100% {
+    transform: translateY(0%) translateX(-50%);
+    border-radius: 100%;
+  }
+}
+
+.regular {
+  padding: 1rem 2rem;
+}
+
 .bigPill {
+  padding: 1rem 2rem;
   height: 60px;
 }
 

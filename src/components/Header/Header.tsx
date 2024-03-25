@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import Name from "./Name";
+import Name from "./NameV1";
 import Navbar from "./Navbar";
 import Hamburger from "./Hamburger";
 import { useEffect, useState } from "react";
@@ -38,9 +38,19 @@ function Header() {
         <Hamburger isVisible={showHamburger} />
       </div>
       <div className="lg:hidden flex justify-between items-center fixed z-50 pl-[8%] pt-8">
-        <div className="h-[70px] flex items-center">
-          <Name />
-        </div>
+        <AnimatePresence>
+          {showHeader && (
+            <motion.div
+              className="h-[70px] flex items-center"
+              initial={{ y: -125 }}
+              animate={{ y: 0 }}
+              exit={{ y: -125 }}
+              transition={{ damping: 50, stiffness: 200 }}
+            >
+              <Name />
+            </motion.div>
+          )}
+        </AnimatePresence>
         <Hamburger isVisible={true} size={70} />
       </div>
     </>

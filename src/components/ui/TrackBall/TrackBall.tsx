@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import { MouseEvent, PropsWithChildren, useState } from "react";
 import styles from "./trackball.module.css";
 import { Link } from "react-router-dom";
+import Reveal from "../Reveal/Reveal";
 
 type TrackBallProps = PropsWithChildren<{
   size?: number | string;
   style?: string;
   linkTo?: string;
   coords?: object;
+  position?: "absolute" | "relative";
 }>;
 
 function TrackBall({
@@ -15,11 +17,11 @@ function TrackBall({
   size = "5rem",
   style = "",
   linkTo = "/",
+  position = "relative",
   coords,
 }: TrackBallProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  console.log(mouseY, "-", mouseX);
 
   function handleMouseMove(event: MouseEvent<HTMLDivElement>) {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -34,38 +36,40 @@ function TrackBall({
 
   return (
     <Link to={linkTo}>
-      <motion.div
-        className={`relative flex rounded-full overflow-hidden justify-center items-center hover:cursor-pointer z-30 ${styles.trackball} ${styles[style]}`}
-        animate={{
-          translateX: mouseX,
-          translateY: mouseY,
-          transition: {
-            duration: 0.15,
-            type: "spring",
-            damping: 15,
-            stiffness: 250,
-          },
-        }}
-        style={{ width: size, height: size, ...coords }}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={resetPosition}
-      >
+      <Reveal>
         <motion.div
+          className={`${position} flex rounded-full overflow-hidden justify-center items-center hover:cursor-pointer z-30 ${styles.trackball} ${styles[style]}`}
           animate={{
-            translateX: mouseX * 1.1,
-            translateY: mouseY * 1.1,
+            translateX: mouseX,
+            translateY: mouseY,
+            transition: {
+              duration: 0.15,
+              type: "spring",
+              damping: 15,
+              stiffness: 250,
+            },
           }}
-          transition={{
-            duration: 0.35,
-            type: "spring",
-            damping: 15,
-            stiffness: 150,
-          }}
-          className="text-neutral-100"
+          style={{ width: size, height: size, ...coords }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={resetPosition}
         >
-          {children}
+          <motion.div
+            animate={{
+              translateX: mouseX * 1.1,
+              translateY: mouseY * 1.1,
+            }}
+            transition={{
+              duration: 0.35,
+              type: "spring",
+              damping: 15,
+              stiffness: 150,
+            }}
+            className="text-neutral-100"
+          >
+            {children}
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </Reveal>
     </Link>
   );
 }

@@ -14,7 +14,7 @@
 }
 
 .trackball:not(:hover)::after {
-  animation: unfill 0.5s ease-in-out forwards;
+  animation: unfill 0.3s ease-in-out forwards;
 }
 
 @keyframes fill {

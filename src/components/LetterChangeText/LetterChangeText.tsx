@@ -33,7 +33,7 @@ function LetterChangeText({ words }: { words: string[] }) {
   }, [words]);
   return (
     <div
-      className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter"
+      className="text-4xl md:text-8xl tracking-tighter"
       // style={{ fontFamily: "Bebas Neue" }}
     >
       <div>DÉVELOPPEUR </div>

@@ -6,10 +6,8 @@ type HorMovTextProps = {
   duration?: number;
 };
 
-function HorMovText({ children, duration = 50 }: HorMovTextProps) {
+function HorMovText({ children, duration = 10 }: HorMovTextProps) {
   const delay = duration / 2;
-  const { scrollYProgress } = useScroll();
-  const position = useTransform(scrollYProgress, [0, 1], [0, -500]);
 
   return (
     <>
@@ -17,10 +15,11 @@ function HorMovText({ children, duration = 50 }: HorMovTextProps) {
         {/* <motion.div style={{ x: position }} className="absolute w-full h-full"> */}
         <motion.div
           animate={{
-            x: [window.innerWidth, -window.innerWidth],
+            x: [0, -window.innerWidth],
           }}
           transition={{
             duration,
+            delay,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
@@ -31,7 +30,7 @@ function HorMovText({ children, duration = 50 }: HorMovTextProps) {
         </motion.div>
         <motion.div
           animate={{
-            x: [window.innerWidth, -window.innerWidth],
+            x: [window.innerWidth, 0],
           }}
           transition={{
             duration,
