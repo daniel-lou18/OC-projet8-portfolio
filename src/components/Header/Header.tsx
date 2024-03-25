@@ -3,10 +3,16 @@ import Name from "./NameV1";
 import Navbar from "./Navbar";
 import Hamburger from "./Hamburger";
 import { useEffect, useState } from "react";
+import HamburgerMenu from "./HamburgerMenu";
 
 function Header() {
   const [showHamburger, setShowHamburger] = useState<boolean>(false);
   const [showHeader, setShowHeader] = useState<boolean>(true);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  function toggleMenu() {
+    setShowMenu((prev) => !prev);
+  }
 
   useEffect(() => {
     function toggleHamburger() {
@@ -35,7 +41,7 @@ function Header() {
             </motion.header>
           )}
         </AnimatePresence>
-        <Hamburger isVisible={showHamburger} />
+        <Hamburger isVisible={showHamburger} onClick={toggleMenu} />
       </div>
       <div className="lg:hidden flex justify-between items-center fixed z-50 pl-[8%] pt-8">
         <AnimatePresence>
@@ -51,8 +57,9 @@ function Header() {
             </motion.div>
           )}
         </AnimatePresence>
-        <Hamburger isVisible={true} size={70} />
+        <Hamburger isVisible={true} onClick={toggleMenu} size={70} />
       </div>
+      <HamburgerMenu isVisible={showMenu} />
     </>
   );
 }

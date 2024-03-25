@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ style = "row" }: { style?: "row" | "col" }) {
   return (
     <nav>
-      <ul className="flex justify-end gap-12">
+      <ul
+        className={`${style === "row" ? "flex" : "block"} justify-end gap-12`}
+      >
         <li className="relative">
           <Link to="/">Page d'accueil</Link>
         </li>

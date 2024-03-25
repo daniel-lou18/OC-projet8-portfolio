@@ -1,25 +1,26 @@
 import { Outlet } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
-import { useEffect } from "react";
 import Header from "../components/Header/Header";
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 
 function AppLayout() {
-  useEffect(() => {
+  useLenis(() => {
     const lenis = new Lenis();
-
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
 
     requestAnimationFrame(raf);
-  }, []);
+  });
 
   return (
-    <div className="text-slate-950">
-      <Header />
-      <Outlet />
-    </div>
+    <ReactLenis root>
+      <div className="text-slate-950">
+        <Header />
+        <Outlet />
+      </div>
+    </ReactLenis>
   );
 }
 

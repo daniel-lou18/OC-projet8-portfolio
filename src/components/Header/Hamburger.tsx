@@ -4,9 +4,10 @@ import { MouseEvent, useState } from "react";
 type HamburgerProps = {
   isVisible: boolean;
   size?: number;
+  onClick: () => void;
 };
 
-function Hamburger({ isVisible, size = 80 }: HamburgerProps) {
+function Hamburger({ isVisible, size = 80, onClick }: HamburgerProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
 
@@ -25,7 +26,7 @@ function Hamburger({ isVisible, size = 80 }: HamburgerProps) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className={`rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-30 hover:cursor-pointer`}
+          className={`data-lenis-toggle rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-50 hover:cursor-pointer`}
           style={{ width: `${size}px`, height: `${size}px` }}
           initial={{ scale: 0 }}
           animate={{
@@ -42,6 +43,7 @@ function Hamburger({ isVisible, size = 80 }: HamburgerProps) {
           exit={{ scale: 0 }}
           onMouseMove={handleMouseMove}
           onMouseLeave={resetPosition}
+          onClick={onClick}
         >
           <motion.div
             animate={{

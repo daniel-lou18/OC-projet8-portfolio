@@ -24,7 +24,7 @@ function Hero() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const scrollBall = useTransform(scrollYProgress, [0, 1], ["-40%", "-10%"]);
+  const scrollBall = useTransform(scrollYProgress, [0, 0.5], ["-50%", "-10%"]);
 
   return (
     <>

@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&é$*+-*!ù%€&123456789";
-const letters2 = "abcdefghijklmnopqrstuvwxyz&é$*+-*!ù%€&123456789";
 
 function LetterChangeText({ words }: { words: string[] }) {
   const wordRef = useRef<HTMLDivElement>(null);
@@ -32,10 +31,7 @@ function LetterChangeText({ words }: { words: string[] }) {
     return () => clearInterval(bigInterval);
   }, [words]);
   return (
-    <div
-      className="text-4xl md:text-8xl tracking-tighter"
-      // style={{ fontFamily: "Bebas Neue" }}
-    >
+    <div className="text-4xl md:text-8xl tracking-tighter">
       <div>DÉVELOPPEUR </div>
       <div ref={wordRef} className="relative">
         {words[0]}
