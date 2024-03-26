@@ -34,6 +34,7 @@ function Summary() {
       className="md:h-screen w-full pt-32 px-[8%]"
       ref={ref}
       style={{ y: position }}
+      id="about"
     >
       <h2 className="mb-12">A propos</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-16">

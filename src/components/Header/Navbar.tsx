@@ -1,11 +1,21 @@
+import { useLenis } from "@studio-freight/react-lenis";
 import MyNavLink from "./MyNavLink";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 type NavbarProps = { style?: "row" | "col"; handleClick?: () => void };
 
 function Navbar({ style = "row", handleClick }: NavbarProps) {
+  const lenis = useLenis();
+  const location = useLocation();
+
   function handleClickCol() {
     if (style === "row") return;
     handleClick?.();
+  }
+
+  function scrollToWorks() {
+    lenis?.scrollTo("#about");
   }
 
   return (
@@ -18,9 +28,11 @@ function Navbar({ style = "row", handleClick }: NavbarProps) {
         <MyNavLink to="/" onClick={handleClickCol}>
           Page d'accueil
         </MyNavLink>
-        <MyNavLink to="" onClick={handleClickCol}>
-          A propos
-        </MyNavLink>
+        {location.pathname === "/" && (
+          <MyNavLink to="/" onClick={scrollToWorks} id="/#about">
+            A propos
+          </MyNavLink>
+        )}
         <MyNavLink to="/contact" onClick={handleClickCol}>
           Contact
         </MyNavLink>
