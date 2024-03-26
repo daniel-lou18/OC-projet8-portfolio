@@ -4,6 +4,8 @@ export type Projects = {
   image: string;
   title: string;
   description: string;
+  websiteUrl: string;
+  gitHubUrl: string;
 };
 
 type GalleryProps = {
@@ -12,7 +14,10 @@ type GalleryProps = {
 
 function Gallery({ projects }: GalleryProps) {
   return (
-    <section className="w-full text-slate-100 pt-8 bg-black pb-24 relative z-10">
+    <section
+      className="w-full text-slate-100 pt-8 bg-black pb-24 relative z-10"
+      id="works"
+    >
       <h2 className="w-fit text-slate-300 pl-[8%] sticky">Réalisations</h2>
       {projects.map((project, id) => (
         <Project {...project} key={id} />

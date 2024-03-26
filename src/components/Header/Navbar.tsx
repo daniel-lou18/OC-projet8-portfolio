@@ -1,7 +1,6 @@
 import { useLenis } from "@studio-freight/react-lenis";
 import MyNavLink from "./MyNavLink";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 type NavbarProps = { style?: "row" | "col"; handleClick?: () => void };
 
@@ -16,6 +15,7 @@ function Navbar({ style = "row", handleClick }: NavbarProps) {
 
   function scrollToWorks() {
     lenis?.scrollTo("#about");
+    handleClick?.();
   }
 
   return (
@@ -29,7 +29,7 @@ function Navbar({ style = "row", handleClick }: NavbarProps) {
           Page d'accueil
         </MyNavLink>
         {location.pathname === "/" && (
-          <MyNavLink to="/" onClick={scrollToWorks} id="/#about">
+          <MyNavLink to="/#about" onClick={scrollToWorks}>
             A propos
           </MyNavLink>
         )}

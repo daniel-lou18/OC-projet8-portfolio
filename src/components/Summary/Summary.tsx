@@ -31,7 +31,7 @@ function Summary() {
 
   return (
     <motion.section
-      className="md:h-screen w-full pt-32 px-[8%]"
+      className="md:h-screen w-full pt-48 px-[8%]"
       ref={ref}
       style={{ y: position }}
       id="about"

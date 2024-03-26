@@ -1,9 +1,9 @@
 import { useScroll, motion, useTransform } from "framer-motion";
-import LetterChangeText from "../LetterChangeText/LetterChangeText";
+import LetterChangeText from "./LetterChangeText/LetterChangeText";
 import { useRef } from "react";
-import Intro from "./Intro";
+import Intro from "../Hero/Intro";
 import ScrollDown from "./ScrollDown";
-import PhotoBall from "../ui/TrackBall/PhotoBall";
+import PhotoBall from "./TrackBall/PhotoBall";
 import image from "../../assets/images/PHOTO UP-20211120-Vermogen-82.jpg";
 import Blob from "../Blob/Blob";
 

@@ -4,6 +4,7 @@ import TrackBall from "../ui/TrackBall/TrackBall";
 import { useRef } from "react";
 import Button from "../ui/Button/Button";
 import Line from "../ui/Line";
+import MyLink from "../ui/MyLink";
 
 function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -25,18 +26,23 @@ function Footer() {
           Me contacter
         </h2>
         <Line>
-          <TrackBall
-            size="10rem"
-            linkTo="/contact"
-            position="absolute"
-            coords={{ top: 0, right: 0, y: "-50%", x: scrollBall }}
-          >
-            C'est par ici !
-          </TrackBall>
+          <MyLink to="/contact">
+            <TrackBall
+              size="10rem"
+              position="absolute"
+              coords={{ top: 0, right: 0, y: "-50%", x: scrollBall }}
+            >
+              C'est par ici !
+            </TrackBall>
+          </MyLink>
         </Line>
         <div className="flex flex-col md:flex-row pt-28 md:pt-16 gap-8">
-          <Button>info@danielderudder.com</Button>
-          <Button>+33 (0)6 58 42 46 50</Button>
+          <MyLink to="mailto:danielderudder@gmail.com">
+            <Button>danielderudder@gmail.com</Button>
+          </MyLink>
+          <MyLink to="tel:+33658424650">
+            <Button>+33 (0)6 58 42 46 50</Button>
+          </MyLink>
         </div>
       </div>
       <HorMovText>Travaillons ensemble !</HorMovText>

@@ -8,7 +8,7 @@ import ProjectMobile from "./ProjectMobile";
 type ProjectProps = Projects;
 
 function Project(props: ProjectProps) {
-  const { title, description, image } = props;
+  const { title, description, image, websiteUrl, gitHubUrl } = props;
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -48,6 +48,8 @@ function Project(props: ProjectProps) {
           backdropFilter={backdropBlur}
           scale={scrollY2}
           filter={scrollBlur}
+          websiteUrl={websiteUrl}
+          gitHubUrl={gitHubUrl}
         />
       </div>
       <div className="md:hidden relative px-[8%] w-full h-[70vh] overflow-hidden">

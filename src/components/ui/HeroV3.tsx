@@ -1,9 +1,9 @@
 import { useScroll, motion, useTransform } from "framer-motion";
-import LetterChangeText from "../LetterChangeText/LetterChangeText";
+import LetterChangeText from "./LetterChangeText/LetterChangeText";
 import { useRef } from "react";
-import Intro from "./Intro";
+import Intro from "../Hero/Intro";
 import ScrollDown from "./ScrollDown";
-import LeftHanger from "./LeftHanger";
+import LeftHanger from "../Hero/LeftHanger";
 import Blob from "../Blob/Blob";
 
 function Hero() {
