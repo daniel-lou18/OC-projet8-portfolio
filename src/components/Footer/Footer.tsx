@@ -1,5 +1,5 @@
 import { useScroll, motion, useTransform } from "framer-motion";
-import HorMovText from "../HorizMovText/HorMovText";
+import HorMovText from "../ui/HorizMovText/HorMovText";
 import TrackBall from "../ui/TrackBall/TrackBall";
 import { useRef } from "react";
 import Button from "../ui/Button/Button";

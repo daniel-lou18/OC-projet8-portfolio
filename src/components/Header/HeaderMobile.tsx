@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Hamburger from "./Hamburger";
-import Name from "./NameV1";
+import Name from "./Name";
 import { HeaderProps } from "./HeaderDesktop";
 
 type HeaderMobileProps = HeaderProps & { showMenu: boolean };

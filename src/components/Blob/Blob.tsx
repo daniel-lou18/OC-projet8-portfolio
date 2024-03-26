@@ -11,7 +11,7 @@ function Blob() {
   const springY = useSpring(mouseY, springOptions);
 
   useEffect(() => {
-    function handleMouseMove(e: MouseEvent) {
+    function handleMouseMove(e: MouseEvent): void {
       if (e.pageY > window.innerHeight) return;
       mouseX.set(e.pageX - size / 2);
       mouseY.set(e.pageY - size / 2);

@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import Name from "./NameV1";
+import Name from "./Name";
 import Navbar from "./Navbar";
 import Hamburger from "./Hamburger";
 
