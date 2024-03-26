@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
-// import { MouseEvent, useEffect } from "react";
+import { useEffect } from "react";
 
 const size = 300;
 
@@ -10,16 +10,16 @@ function Blob() {
   const springX = useSpring(mouseX, springOptions);
   const springY = useSpring(mouseY, springOptions);
 
-  // useEffect(() => {
-  //   function handleMouseMove(e: MouseEvent<Document, MouseEvent>): void {
-  //     if (e.pageY > window.innerHeight) return;
-  //     mouseX.set(e.pageX - size / 2);
-  //     mouseY.set(e.pageY - size / 2);
-  //   }
-  //   document.addEventListener("mousemove", handleMouseMove);
+  useEffect(() => {
+    function handleMouseMove(e: MouseEvent) {
+      if (e.pageY > window.innerHeight) return;
+      mouseX.set(e.pageX - size / 2);
+      mouseY.set(e.pageY - size / 2);
+    }
+    document.addEventListener("mousemove", handleMouseMove);
 
-  //   return () => document.removeEventListener("mousemove", handleMouseMove);
-  // }, [mouseX, mouseY]);
+    return () => document.removeEventListener("mousemove", handleMouseMove);
+  }, [mouseX, mouseY]);
 
   return (
     <div className="relative inset-0 blur-3xl lg:block hidden">
