@@ -29,7 +29,7 @@ const projects = [
     description:
       "Créer le front-end pour une agence de location immobilière avec React et React Router. Mettre en place la navigation côté client et l'affichage dynamique des différents composants. Utiliser Sass pour la mise en forme.",
     image: imgKasa,
-    websiteUrl: "https://spotilite-v1.netlify.app/",
+    websiteUrl: "https://daniel-oc-projet6-kasa.netlify.app/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet6-Kasa",
   },
 ];
