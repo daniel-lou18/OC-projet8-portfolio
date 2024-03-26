@@ -1,9 +1,7 @@
-import { AnimatePresence, motion } from "framer-motion";
-import Name from "./NameV1";
-import Navbar from "./Navbar";
-import Hamburger from "./Hamburger";
 import { useEffect, useState } from "react";
 import HamburgerMenu from "./HamburgerMenu";
+import HeaderDesktop from "./HeaderDesktop";
+import HeaderMobile from "./HeaderMobile";
 
 function Header() {
   const [showHamburger, setShowHamburger] = useState<boolean>(false);
@@ -26,40 +24,17 @@ function Header() {
 
   return (
     <>
-      <div className="lg:block hidden">
-        <AnimatePresence initial={false}>
-          {showHeader && (
-            <motion.header
-              className="justify-between w-full h-16 top-4 z-20 px-[8%] flex items-center fixed"
-              initial={{ y: -125 }}
-              animate={{ y: 0 }}
-              exit={{ y: -125 }}
-              transition={{ damping: 50, stiffness: 200 }}
-            >
-              <Name />
-              <Navbar />
-            </motion.header>
-          )}
-        </AnimatePresence>
-        <Hamburger isVisible={showHamburger} onClick={toggleMenu} />
-      </div>
-      <div className="lg:hidden flex justify-between items-center fixed z-50 pl-[8%] pt-8">
-        <AnimatePresence>
-          {showHeader && (
-            <motion.div
-              className="h-[70px] flex items-center"
-              initial={{ y: -125 }}
-              animate={{ y: 0 }}
-              exit={{ y: -125 }}
-              transition={{ damping: 50, stiffness: 200 }}
-            >
-              <Name />
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <Hamburger isVisible={true} onClick={toggleMenu} size={70} />
-      </div>
-      <HamburgerMenu isVisible={showMenu} />
+      <HeaderDesktop
+        showHeader={showHeader}
+        showHamburger={showHamburger}
+        handleClick={toggleMenu}
+      />
+      <HeaderMobile
+        showHeader={showHeader}
+        showMenu={showMenu}
+        handleClick={toggleMenu}
+      />
+      <HamburgerMenu isVisible={showMenu} handleClick={toggleMenu} />
     </>
   );
 }

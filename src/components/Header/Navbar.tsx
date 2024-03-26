@@ -1,23 +1,29 @@
-import { Link } from "react-router-dom";
+import MyNavLink from "./MyNavLink";
 
-function Navbar({ style = "row" }: { style?: "row" | "col" }) {
+type NavbarProps = { style?: "row" | "col"; handleClick?: () => void };
+
+function Navbar({ style = "row", handleClick }: NavbarProps) {
+  function handleClickCol() {
+    if (style === "row") return;
+    handleClick?.();
+  }
+
   return (
-    <nav>
+    <nav className={`${style === "row" ? "h-full" : ""}`}>
       <ul
-        className={`${style === "row" ? "flex" : "block"} justify-end gap-12`}
+        className={`${
+          style === "row" ? "flex-row" : "flex-col"
+        } flex h-full gap-12`}
       >
-        <li className="relative">
-          <Link to="/">Page d'accueil</Link>
-        </li>
-        <li className="relative">
-          <Link to="/">A propos</Link>
-        </li>
-        <li className="relative">
-          <Link to="/">CV</Link>
-        </li>
-        <li className="relative">
-          <Link to="/contact">Contact</Link>
-        </li>
+        <MyNavLink to="/" onClick={handleClickCol}>
+          Page d'accueil
+        </MyNavLink>
+        <MyNavLink to="" onClick={handleClickCol}>
+          A propos
+        </MyNavLink>
+        <MyNavLink to="/contact" onClick={handleClickCol}>
+          Contact
+        </MyNavLink>
       </ul>
     </nav>
   );

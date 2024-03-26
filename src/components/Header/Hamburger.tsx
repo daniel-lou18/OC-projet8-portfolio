@@ -26,7 +26,7 @@ function Hamburger({ isVisible, size = 80, onClick }: HamburgerProps) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className={`data-lenis-toggle rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-50 hover:cursor-pointer`}
+          className={`rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-50 hover:cursor-pointer`}
           style={{ width: `${size}px`, height: `${size}px` }}
           initial={{ scale: 0 }}
           animate={{
