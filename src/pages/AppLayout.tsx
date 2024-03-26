@@ -6,7 +6,7 @@ import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 function AppLayout() {
   useLenis(() => {
     const lenis = new Lenis();
-    function raf(time) {
+    function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
