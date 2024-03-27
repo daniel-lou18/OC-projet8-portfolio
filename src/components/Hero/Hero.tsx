@@ -17,7 +17,7 @@ function Hero() {
     <>
       <Blob />
       <motion.div
-        className="h-screen px-[8%] w-full flex flex-col justify-end md:justify-between overflow-hidden pt-[13%]"
+        className="flex h-screen w-full flex-col justify-end overflow-hidden px-[8%] pb-4 pt-56 md:justify-between md:pb-0"
         ref={ref}
       >
         <HeroTitle />

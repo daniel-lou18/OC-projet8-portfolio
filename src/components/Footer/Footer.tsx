@@ -17,12 +17,12 @@ function Footer() {
 
   return (
     <motion.footer
-      className="h-screen w-full bg-neutral-100 pt-56 relative overflow-hidden"
+      className="relative h-screen w-full overflow-hidden bg-neutral-100 pt-56"
       ref={footerRef}
       style={{ y: scrollY }}
     >
-      <div className="px-[8%] w-full">
-        <h2 className="text-4xl md:text-8xl pb-28 relative contact-title">
+      <div className="w-full px-[8%]">
+        <h2 className="contact-title relative pb-28 text-4xl md:text-8xl">
           Me contacter
         </h2>
         <Line>
@@ -36,7 +36,7 @@ function Footer() {
             </TrackBall>
           </MyLink>
         </Line>
-        <div className="flex flex-col md:flex-row pt-28 md:pt-16 gap-8">
+        <div className="flex flex-col gap-8 pt-28 md:flex-row md:pt-16">
           <MyLink to="mailto:danielderudder@gmail.com">
             <Button>danielderudder@gmail.com</Button>
           </MyLink>

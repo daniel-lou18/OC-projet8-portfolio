@@ -33,7 +33,7 @@ function LetterChangeText({ words }: { words: string[] }) {
     return () => clearInterval(bigInterval);
   }, [words]);
   return (
-    <div className="text-4xl md:text-8xl tracking-tighter">
+    <div className="text-4xl tracking-tighter lg:text-8xl">
       <div>DÉVELOPPEUR </div>
       <div ref={wordRef} className="relative">
         {words[0]}

@@ -14,10 +14,10 @@ const words = [
 
 function HeroTitle() {
   return (
-    <div className="h-fit flex flex-col gap-8 md:gap-0 mb-32 md:mb-0">
+    <div className="mb-32 flex h-fit flex-col gap-6 md:mb-0 md:gap-0">
       <h1>
         <Reveal>
-          <div className="text-5xl md:text-8xl tracking-tighter">
+          <div className="mb-4 text-5xl tracking-tighter md:mb-0 md:text-6xl lg:text-8xl">
             DANIEL DERUDDER
           </div>
         </Reveal>
