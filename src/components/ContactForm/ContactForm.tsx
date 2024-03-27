@@ -11,6 +11,8 @@ function ContactForm() {
 
     if (!formRef.current) return;
 
+    console.log(formRef.current);
+
     emailjs
       .sendForm("service_kprig4n", "contact_form", formRef.current, {
         publicKey: "tzDIze6xDQ5D-MFoV",
@@ -30,11 +32,7 @@ function ContactForm() {
       className="grid min-h-screen w-full grid-cols-3 overflow-hidden px-[8%] pb-8 pt-48"
       ref={formRef}
       onSubmit={handleSubmit}
-      name="contact"
-      method="POST"
-      data-netlify="true"
     >
-      <input type="hidden" name="form-name" value="contact" />
       <Reveal>
         <div className="col-span-1 pr-8">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
@@ -132,15 +130,15 @@ function ContactForm() {
             <div className="col-span-full">
               <Reveal>
                 <label
-                  htmlFor="about"
+                  htmlFor="message"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
                   Message
                 </label>
                 <div className="mt-2">
                   <textarea
-                    id="about"
-                    name="about"
+                    id="message"
+                    name="message"
                     rows={3}
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     defaultValue={""}
