@@ -3,7 +3,13 @@ import Line from "../ui/Line";
 import TrackBall from "../ui/TrackBall/TrackBall";
 import { useScroll, useTransform } from "framer-motion";
 
-function SubmitButton({ isLoading }: { isLoading: boolean }) {
+type SubmitButtonProps = {
+  isLoading: boolean;
+  error: string;
+  isSuccess: boolean;
+};
+
+function SubmitButton({ isLoading, error, isSuccess }: SubmitButtonProps) {
   const footerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: footerRef,
@@ -12,7 +18,15 @@ function SubmitButton({ isLoading }: { isLoading: boolean }) {
   const scrollBall = useTransform(scrollYProgress, [0, 1], ["-70%", "-10%"]);
 
   return (
-    <div className="mt-24" ref={footerRef}>
+    <div className="relative mt-24" ref={footerRef}>
+      {!isLoading && error && (
+        <p className="absolute left-0 top-1 text-red-700">{error}</p>
+      )}
+      {!isLoading && !error && isSuccess && (
+        <p className="absolute left-0 top-1 text-teal-700">
+          {"Votre message a été envoyé. Je vous réponds ASAP."}
+        </p>
+      )}
       <Line>
         <button type="submit" className="w-full">
           <TrackBall

@@ -9,6 +9,7 @@ function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -16,6 +17,7 @@ function ContactForm() {
     try {
       setIsLoading(true);
       setError("");
+      setIsSuccess(false);
       await emailjs.sendForm(
         "service_kprig4n",
         "contact_form",
@@ -24,17 +26,19 @@ function ContactForm() {
           publicKey: "tzDIze6xDQ5D-MFoV",
         },
       );
+      setIsSuccess(true);
       console.log("Votre message a été envoyé!");
     } catch (err: unknown) {
       setError("Échec de l'envoi du message");
     } finally {
       setIsLoading(false);
+      formRef.current.reset();
     }
   }
 
   return (
     <form
-      className="grid min-h-screen w-full grid-cols-3 overflow-hidden px-[8%] pb-8 pt-48"
+      className="grid min-h-screen w-full grid-cols-1 overflow-hidden px-[8%] pb-8 pt-48 md:grid-cols-3"
       ref={formRef}
       onSubmit={handleSubmit}
     >
@@ -48,7 +52,7 @@ function ContactForm() {
             mail !
           </p>
         </div>
-        <div className="flex flex-col gap-8 pt-28 md:pt-16">
+        <div className="flex flex-col gap-8 pt-12">
           <MyLink to="mailto:danielderudder@gmail.com">
             <Button>danielderudder@gmail.com</Button>
           </MyLink>
@@ -163,7 +167,11 @@ function ContactForm() {
         </div>
       </div>
       <div className="col-span-3">
-        <SubmitButton isLoading={isLoading} />
+        <SubmitButton
+          isLoading={isLoading}
+          error={error}
+          isSuccess={isSuccess}
+        />
       </div>
     </form>
   );
