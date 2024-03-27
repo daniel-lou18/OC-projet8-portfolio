@@ -32,6 +32,7 @@ function ContactForm() {
       onSubmit={handleSubmit}
       name="contact"
       method="POST"
+      data-netlify="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <Reveal>
