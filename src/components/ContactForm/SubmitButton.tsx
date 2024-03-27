@@ -4,7 +4,7 @@ import TrackBall from "../ui/TrackBall/TrackBall";
 import { useScroll, useTransform } from "framer-motion";
 
 function SubmitButton() {
-  const footerRef = useRef<HTMLElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: footerRef,
     offset: ["start end", "start start"],
@@ -12,7 +12,7 @@ function SubmitButton() {
   const scrollBall = useTransform(scrollYProgress, [0, 1], ["-70%", "-10%"]);
 
   return (
-    <div className="mt-24">
+    <div className="mt-24" ref={footerRef}>
       <Line>
         <button type="submit" className="w-full">
           <TrackBall

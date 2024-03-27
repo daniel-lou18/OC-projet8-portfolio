@@ -1,10 +1,35 @@
+import { FormEvent, useRef } from "react";
 import Reveal from "../ui/Reveal/Reveal";
 import SubmitButton from "./SubmitButton";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm("service_kprig4n", "contact_form", formRef.current, {
+        publicKey: "tzDIze6xDQ5D-MFoV",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
+  }
+
   return (
     <form
       className="grid min-h-screen w-full grid-cols-3 overflow-hidden px-[8%] pb-8 pt-48"
+      ref={formRef}
+      onSubmit={handleSubmit}
       name="contact"
       method="POST"
     >
@@ -86,17 +111,17 @@ function ContactForm() {
             <div className="sm:col-span-3">
               <Reveal>
                 <label
-                  htmlFor="street-address"
+                  htmlFor="subject"
                   className="block text-sm font-medium leading-6 text-gray-900"
                 >
-                  Sujet
+                  Objet
                 </label>
                 <div className="mt-2">
                   <input
                     type="text"
-                    name="street-address"
-                    id="street-address"
-                    autoComplete="street-address"
+                    name="subject"
+                    id="subject"
+                    autoComplete="subject"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
