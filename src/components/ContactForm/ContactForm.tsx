@@ -1,30 +1,35 @@
-import { FormEvent, useRef } from "react";
+import { FormEvent, useRef, useState } from "react";
 import Reveal from "../ui/Reveal/Reveal";
 import SubmitButton from "./SubmitButton";
 import emailjs from "@emailjs/browser";
+import MyLink from "../ui/MyLink";
+import Button from "../ui/Button/Button";
 
 function ContactForm() {
   const formRef = useRef<HTMLFormElement>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>("");
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-
     if (!formRef.current) return;
-
-    console.log(formRef.current);
-
-    emailjs
-      .sendForm("service_kprig4n", "contact_form", formRef.current, {
-        publicKey: "tzDIze6xDQ5D-MFoV",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
+    try {
+      setIsLoading(true);
+      setError("");
+      await emailjs.sendForm(
+        "service_kprig4n",
+        "contact_form",
+        formRef.current,
+        {
+          publicKey: "tzDIze6xDQ5D-MFoV",
         },
       );
+      console.log("Votre message a été envoyé!");
+    } catch (err: unknown) {
+      setError("Échec de l'envoi du message");
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -42,6 +47,14 @@ function ContactForm() {
             N'hésitez pas à me contacter via ce formulaire, ou directement par
             mail !
           </p>
+        </div>
+        <div className="flex flex-col gap-8 pt-28 md:pt-16">
+          <MyLink to="mailto:danielderudder@gmail.com">
+            <Button>danielderudder@gmail.com</Button>
+          </MyLink>
+          <MyLink to="tel:+33658424650">
+            <Button>+33 (0)6 58 42 46 50</Button>
+          </MyLink>
         </div>
       </Reveal>
       <div className="col-span-2">
@@ -150,7 +163,7 @@ function ContactForm() {
         </div>
       </div>
       <div className="col-span-3">
-        <SubmitButton />
+        <SubmitButton isLoading={isLoading} />
       </div>
     </form>
   );

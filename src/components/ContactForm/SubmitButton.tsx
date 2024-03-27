@@ -3,7 +3,7 @@ import Line from "../ui/Line";
 import TrackBall from "../ui/TrackBall/TrackBall";
 import { useScroll, useTransform } from "framer-motion";
 
-function SubmitButton() {
+function SubmitButton({ isLoading }: { isLoading: boolean }) {
   const footerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: footerRef,
@@ -20,7 +20,7 @@ function SubmitButton() {
             position="absolute"
             coords={{ top: 0, right: 0, y: "calc(-50% - 20px)", x: scrollBall }}
           >
-            Envoyer
+            {`${isLoading ? "En cours ..." : "Envoyer"}`}
           </TrackBall>
         </button>
       </Line>
