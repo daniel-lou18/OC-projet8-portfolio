@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 function SkillBar({ rating }: { rating: number }) {
   return (
-    <div className="w-full h-full rounded-lg overflow-hidden bg-slate-300">
+    <div className="h-8 w-full overflow-hidden rounded-lg bg-slate-300 md:h-full">
       <motion.span
-        className="bg-gray-700 h-full inline-block"
+        className="inline-block h-full bg-gray-700"
         initial={{ width: `0%` }}
         whileInView={{ width: `${rating * 10}%` }}
         viewport={{ once: true }}
@@ -15,7 +15,7 @@ function SkillBar({ rating }: { rating: number }) {
         }}
       />
       <span
-        className="bg-gray-300 h-full inline-block"
+        className="inline-block h-full bg-gray-300"
         style={{ width: `${(10 - rating) * 10}%` }}
       />
     </div>

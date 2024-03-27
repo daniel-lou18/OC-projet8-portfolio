@@ -29,12 +29,12 @@ function Project(props: ProjectProps) {
   const scrollY2 = useTransform(
     scrollYProgress,
     [0.1, 0.5, 0.9],
-    [0.8, 1, 0.9]
+    [0.8, 1, 0.9],
   );
 
   return (
     <>
-      <div className="hidden md:block relative mt-16 p-0 w-full h-[70vh] overflow-hidden">
+      <div className="relative mt-16 hidden h-[70vh] w-full overflow-hidden p-0 lg:block">
         <ProjectImage
           title={title}
           image={image}
@@ -52,7 +52,7 @@ function Project(props: ProjectProps) {
           gitHubUrl={gitHubUrl}
         />
       </div>
-      <div className="md:hidden relative px-[8%] w-full h-[70vh] overflow-hidden">
+      <div className="relative w-full overflow-hidden px-[8%] pt-24 lg:hidden">
         <ProjectMobile {...props} />
       </div>
     </>

@@ -7,7 +7,7 @@ const cardsData = [
   {
     id: 1,
     title: "Développement web",
-    text: "En plus de formation diplômante de développeur web, j'ai suivi de nombreuses formations (Udemy, App Academy) sur le JavaScript, le TypeScript, React et la programmation fondamentale (LeetCode). Je travaille en permanence sur des projets personnels.",
+    text: "En plus de mon diplôme de développeur web, j'ai suivi de nombreuses formations en ligne (Udemy, App Academy) et je dispose de solides bases en programmation fondamentale (LeetCode). Je travaille en permanence sur des projets personnels.",
   },
   {
     id: 2,
@@ -31,13 +31,13 @@ function Summary() {
 
   return (
     <motion.section
-      className="md:h-screen w-full pt-48 px-[8%]"
+      className="w-full px-[8%] pt-48 md:h-screen"
       ref={ref}
       style={{ y: position }}
       id="about"
     >
       <h2 className="mb-12">A propos</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
         {cardsData.map((cardData) => (
           <Card key={cardData.id} {...cardData} />
         ))}

@@ -37,7 +37,7 @@ function ProjectInfo({
 }: ProjectInfoProps) {
   return (
     <motion.div
-      className="hidden md:block w-4/5 top-[30%] md:w-[22%] p-6 xl:p-8 absolute md:left-[65%] md:top-32 rounded-2xl overflow-hidden"
+      className="absolute top-[30%] hidden w-4/5 overflow-hidden rounded-2xl p-6 md:left-[65%] md:top-32 md:block md:w-[22%] xl:p-8"
       style={{
         backgroundColor: "rgba(255,255,255,0.2)",
         backdropFilter,
@@ -54,9 +54,9 @@ function ProjectInfo({
         }}
       >
         <p className="text-sm xl:text-base">{description}</p>
-        <div className="flex justify-end gap-4 h-6">
+        <div className="flex h-6 justify-end gap-4">
           <MyLink to={websiteUrl} target="_blank">
-            <span className="text-xl hover:scale-125 hover:cursor-pointer transition delay-100 duration-250 ease-in-out">
+            <span className="duration-250 text-xl transition delay-100 ease-in-out hover:scale-125 hover:cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -75,7 +75,7 @@ function ProjectInfo({
             </span>
           </MyLink>
           <MyLink to={gitHubUrl} target="_blank">
-            <span className="hover:scale-125 hover:cursor-pointer text-slate-300 hover:text-white transition delay-100 duration-250 ease-in-out">
+            <span className="duration-250 text-slate-300 transition delay-100 ease-in-out hover:scale-125 hover:cursor-pointer hover:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

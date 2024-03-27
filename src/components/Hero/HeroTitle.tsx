@@ -17,7 +17,7 @@ function HeroTitle() {
     <div className="mb-32 flex h-fit flex-col gap-6 md:mb-0 md:gap-0">
       <h1>
         <Reveal>
-          <div className="mb-4 text-4xl tracking-tighter md:mb-0 md:text-6xl lg:text-8xl">
+          <div className="mb-4 text-4xl tracking-tighter md:text-6xl lg:mb-0 lg:text-8xl">
             DANIEL DERUDDER
           </div>
         </Reveal>

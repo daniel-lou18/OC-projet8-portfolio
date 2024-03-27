@@ -11,7 +11,7 @@ function HorMovText({ children, duration = 20 }: HorMovTextProps) {
 
   return (
     <>
-      <div className="absolute bottom-4 text-9xl font-bold w-full h-32 overflow-hidden text-gray-200">
+      <div className="absolute bottom-4 h-16 w-full overflow-hidden text-5xl font-bold text-gray-200 md:text-7xl lg:h-24 lg:text-8xl">
         <motion.div
           animate={{
             x: [0, -window.innerWidth],
