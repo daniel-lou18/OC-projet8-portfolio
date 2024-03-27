@@ -18,9 +18,11 @@ function LetterChangeText({ words }: { words: string[] }) {
             return letters[Math.floor(Math.random() * 40)];
           })
           .join("");
+        if (!wordRef.current) return;
         wordRef.current!.innerText = newWord;
         counter++;
         if (counter >= 10) {
+          if (!wordRef.current) return;
           wordRef.current!.innerText = word;
           clearInterval(interval);
         }
