@@ -11,15 +11,15 @@ function HeaderMobile({
   handleClick,
 }: HeaderMobileProps) {
   return (
-    <div className="lg:hidden flex justify-between items-center fixed z-50 pl-[8%] pt-8">
+    <div className="fixed z-50 flex items-center justify-between pl-[8%] pt-8 lg:hidden">
       <AnimatePresence>
         {showHeader && !showMenu && (
           <motion.div
-            className="h-[70px] flex items-center"
-            initial={{ y: -125, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -125, opacity: 0 }}
-            transition={{ damping: 50, stiffness: 200 }}
+            className="flex h-[70px] items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ type: "tween", duration: 0.3 }}
           >
             <Name />
           </motion.div>

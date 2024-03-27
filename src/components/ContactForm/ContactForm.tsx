@@ -38,12 +38,12 @@ function ContactForm() {
 
   return (
     <form
-      className="grid min-h-screen w-full grid-cols-1 overflow-hidden px-[8%] pb-8 pt-48 md:grid-cols-3"
+      className="grid min-h-screen w-full grid-cols-1 overflow-hidden px-[8%] pb-16 pt-48 md:grid-cols-3 md:pb-8"
       ref={formRef}
       onSubmit={handleSubmit}
     >
-      <Reveal>
-        <div className="col-span-1 pr-8">
+      <div className="col-span-1 pr-8">
+        <Reveal>
           <h2 className="text-base font-semibold leading-7 text-gray-900">
             Me contacter
           </h2>
@@ -51,20 +51,20 @@ function ContactForm() {
             N'hésitez pas à me contacter via ce formulaire, ou directement par
             mail !
           </p>
-        </div>
-        <div className="flex flex-col gap-8 pt-12">
-          <MyLink to="mailto:danielderudder@gmail.com">
-            <Button>danielderudder@gmail.com</Button>
-          </MyLink>
-          <MyLink to="tel:+33658424650">
-            <Button>+33 (0)6 58 42 46 50</Button>
-          </MyLink>
-        </div>
-      </Reveal>
-      <div className="col-span-2">
+          <div className="flex flex-col gap-4 pb-8 pt-6 md:gap-8 md:pb-0 md:pt-12">
+            <MyLink to="mailto:danielderudder@gmail.com">
+              <Button>danielderudder@gmail.com</Button>
+            </MyLink>
+            <MyLink to="tel:+33658424650">
+              <Button>+33 (0)6 58 42 46 50</Button>
+            </MyLink>
+          </div>
+        </Reveal>
+      </div>
+      <div className="col-span-1 md:col-span-2">
         <div className="border-b border-gray-900/10 pb-12">
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div className="sm:col-span-3">
+            <div className="col-start-1 col-end-7 md:col-start-2 lg:col-span-3">
               <Reveal>
                 <label
                   htmlFor="first-name"
@@ -84,7 +84,7 @@ function ContactForm() {
               </Reveal>
             </div>
 
-            <div className="sm:col-span-3">
+            <div className="col-start-1 col-end-7 md:col-start-2 lg:col-span-3">
               <Reveal>
                 <label
                   htmlFor="last-name"
@@ -104,7 +104,7 @@ function ContactForm() {
               </Reveal>
             </div>
 
-            <div className="sm:col-span-3">
+            <div className="col-start-1 col-end-7 md:col-start-2 lg:col-span-3">
               <Reveal>
                 <label
                   htmlFor="email"
@@ -114,6 +114,7 @@ function ContactForm() {
                 </label>
                 <div className="mt-2">
                   <input
+                    required
                     id="email"
                     name="email"
                     type="email"
@@ -124,7 +125,7 @@ function ContactForm() {
               </Reveal>
             </div>
 
-            <div className="sm:col-span-3">
+            <div className="col-start-1 col-end-7 md:col-start-2 lg:col-span-3">
               <Reveal>
                 <label
                   htmlFor="subject"
@@ -144,7 +145,7 @@ function ContactForm() {
               </Reveal>
             </div>
 
-            <div className="col-span-full">
+            <div className="col-start-1 col-end-7 md:col-start-2 lg:col-span-full">
               <Reveal>
                 <label
                   htmlFor="message"
@@ -166,7 +167,7 @@ function ContactForm() {
           </div>
         </div>
       </div>
-      <div className="col-span-3">
+      <div className="col-span-1 md:col-span-3">
         <SubmitButton
           isLoading={isLoading}
           error={error}
