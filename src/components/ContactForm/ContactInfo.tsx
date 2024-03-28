@@ -6,10 +6,8 @@ function ContactInfo() {
   return (
     <div className="col-span-1 pr-8">
       <Reveal>
-        <h2 className="text-base font-semibold leading-7 text-gray-900">
-          Me contacter
-        </h2>
-        <p className="mt-1 text-base leading-6 text-gray-600">
+        <h2 className="text-base font-semibold leading-7">Me contacter</h2>
+        <p className="mt-1 text-base leading-6">
           N'hésitez pas à me contacter via ce formulaire, ou directement par
           mail !
         </p>
