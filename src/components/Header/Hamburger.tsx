@@ -63,7 +63,7 @@ function Hamburger({
               damping: 15,
               stiffness: 150,
             }}
-            className={`${styles.hamburger}`}
+            className={`${styles.hamburger} ${showMenu ? "" : ""}`}
           ></motion.div>
         </motion.div>
       )}
