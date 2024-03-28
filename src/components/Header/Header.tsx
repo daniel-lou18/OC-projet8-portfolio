@@ -28,6 +28,7 @@ function Header() {
         showHeader={showHeader}
         showHamburger={showHamburger}
         handleClick={toggleMenu}
+        showMenu={showMenu}
       />
       <HeaderMobile
         showHeader={showHeader}

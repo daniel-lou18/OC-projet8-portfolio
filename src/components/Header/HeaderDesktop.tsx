@@ -5,6 +5,7 @@ import Hamburger from "./Hamburger";
 
 export type HeaderProps = {
   showHeader: boolean;
+  showMenu: boolean;
   handleClick: () => void;
 };
 
@@ -13,6 +14,7 @@ type HeaderDesktopProps = HeaderProps & { showHamburger: boolean };
 function HeaderDesktop({
   showHeader,
   showHamburger,
+  showMenu,
   handleClick,
 }: HeaderDesktopProps) {
   return (
@@ -31,7 +33,11 @@ function HeaderDesktop({
           </motion.header>
         )}
       </AnimatePresence>
-      <Hamburger isVisible={showHamburger} onClick={handleClick} />
+      <Hamburger
+        isVisible={showHamburger || showMenu}
+        showMenu={showMenu}
+        onClick={handleClick}
+      />
     </div>
   );
 }

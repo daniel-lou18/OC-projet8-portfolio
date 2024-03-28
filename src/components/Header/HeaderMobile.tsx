@@ -3,7 +3,7 @@ import Hamburger from "./Hamburger";
 import Name from "./Name";
 import { HeaderProps } from "./HeaderDesktop";
 
-type HeaderMobileProps = HeaderProps & { showMenu: boolean };
+type HeaderMobileProps = HeaderProps;
 
 function HeaderMobile({
   showHeader,
@@ -25,7 +25,12 @@ function HeaderMobile({
           </motion.div>
         )}
       </AnimatePresence>
-      <Hamburger isVisible={true} onClick={handleClick} size={70} />
+      <Hamburger
+        isVisible={true}
+        showMenu={showMenu}
+        onClick={handleClick}
+        size={70}
+      />
     </div>
   );
 }

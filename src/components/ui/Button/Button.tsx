@@ -10,7 +10,7 @@ type ButtonProps = PropsWithChildren<{
 function Button({ children, className = "regular" }: ButtonProps) {
   return (
     <button
-      className={`relative z-30 overflow-hidden rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
+      className={`relative z-30 overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
     >
       {children}
     </button>

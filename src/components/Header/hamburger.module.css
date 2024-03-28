@@ -1,0 +1,25 @@
+.hamburger {
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background-color: antiquewhite;
+  top: 45%;
+  left: 30%;
+}
+
+.hamburger::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 1px;
+  background-color: antiquewhite;
+  bottom: 45%;
+  left: 30%;
+}

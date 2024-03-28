@@ -1,13 +1,20 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { MouseEvent, useState } from "react";
+import styles from "./hamburger.module.css";
 
 type HamburgerProps = {
   isVisible: boolean;
+  showMenu: boolean;
   size?: number;
   onClick: () => void;
 };
 
-function Hamburger({ isVisible, size = 80, onClick }: HamburgerProps) {
+function Hamburger({
+  isVisible,
+  showMenu,
+  size = 80,
+  onClick,
+}: HamburgerProps) {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
 
@@ -26,7 +33,7 @@ function Hamburger({ isVisible, size = 80, onClick }: HamburgerProps) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className={`rounded-full overflow-hidden bg-slate-700 top-8 right-8 flex justify-center items-center fixed z-50 hover:cursor-pointer`}
+          className="fixed right-8 top-8 z-50 flex items-center justify-center overflow-hidden rounded-full bg-slate-700 hover:cursor-pointer"
           style={{ width: `${size}px`, height: `${size}px` }}
           initial={{ scale: 0 }}
           animate={{
@@ -56,31 +63,8 @@ function Hamburger({ isVisible, size = 80, onClick }: HamburgerProps) {
               damping: 15,
               stiffness: 150,
             }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="48"
-              height="24"
-            >
-              <line
-                x1="0"
-                y1="16"
-                x2="24"
-                y2="16"
-                stroke="white"
-                strokeWidth="2"
-              />
-              <line
-                x1="0"
-                y1="8"
-                x2="24"
-                y2="8"
-                stroke="white"
-                strokeWidth="2"
-              />
-            </svg>
-          </motion.div>
+            className={`${styles.hamburger}`}
+          ></motion.div>
         </motion.div>
       )}
     </AnimatePresence>
