@@ -2,24 +2,7 @@ import { useRef } from "react";
 import Card from "./Card";
 import Links from "./Links";
 import { useScroll, useTransform, motion } from "framer-motion";
-
-const cardsData = [
-  {
-    id: 1,
-    title: "Développement web",
-    text: "En plus de mon diplôme de développeur web, j'ai suivi de nombreuses formations en ligne (Udemy, App Academy) et je dispose de solides bases en programmation fondamentale (LeetCode). Je travaille en permanence sur des projets personnels.",
-  },
-  {
-    id: 2,
-    title: "Expérience",
-    text: "J'ai plus de 10 ans d'expérience professionnelle en tant que traducteur indépendant français-néerlandais. Je parle également couramment l'anglais.",
-  },
-  {
-    id: 3,
-    title: "Objectif",
-    text: "Mon objectif est une reconversion professionnelle orientée vers le développement web et mobile. Je suis impatient de mettre en pratique mes compétences qui évoluent continuellement.",
-  },
-];
+import { cardsData } from "../../data/data";
 
 function Summary() {
   const ref = useRef<HTMLDivElement>(null);

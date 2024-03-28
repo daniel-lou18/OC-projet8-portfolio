@@ -13,26 +13,26 @@ const ProjectImage = forwardRef<HTMLDivElement, ProjectImageProps>(
   function ProjectImage({ title, image, scale, filter, y }, ref) {
     return (
       <motion.div
-        className="w-full flex justify-center items-center relative"
+        className="relative flex w-full items-center justify-center"
         style={{ scale, filter }}
         ref={ref}
       >
         <motion.h3
-          className="text-6xl font-bold mb-4 absolute top-1/3 left-40 z-20 whitespace-pre-wrap w-96"
+          className="absolute left-40 top-1/3 z-20 mb-4 w-96 whitespace-pre-wrap text-6xl font-bold"
           style={{ y, scale }}
         >
           {title}
         </motion.h3>
-        <div className="overflow-hidden h-[60vh] w-3/5 rounded-md relative shadow-xl">
+        <div className="relative h-[60vh] w-3/5 overflow-hidden rounded-md shadow-xl">
           <img
             src={image}
-            className="w-full h-auto object-cover"
+            className="h-full w-full object-cover object-top"
             style={{ filter: "brightness(0.8)" }}
           />
         </div>
       </motion.div>
     );
-  }
+  },
 );
 
 export default ProjectImage;

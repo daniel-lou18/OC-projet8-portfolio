@@ -6,18 +6,18 @@ type ProjectMobileProps = {
 
 function ProjectMobile({ image, title, description }: ProjectMobileProps) {
   return (
-    <div className="mt-8">
-      <div className="overflow-hidden rounded-md relative shadow-xl">
+    <div className="mt-8 w-full">
+      <div className="relative h-64 w-full overflow-hidden rounded-md shadow-xl">
         <img
           src={image}
-          className="w-full h-auto object-cover"
+          className="h-full w-full object-cover object-top"
           style={{ filter: "brightness(0.8)" }}
         />
       </div>
-      <div className="pb-4 pt-8 flex justify-between gap-4 border-b-[1px] border-solid border-slate-100">
+      <div className="flex justify-between gap-4 border-b-[1px] border-solid border-slate-100 pb-4 pt-8">
         <h3 className="uppercase">{title}</h3>
         <div className="flex gap-4">
-          <span className="text-xl hover:scale-125 hover:cursor-pointer transition delay-100 duration-250 ease-in-out">
+          <span className="duration-250 text-xl transition delay-100 ease-in-out hover:scale-125 hover:cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -34,7 +34,7 @@ function ProjectMobile({ image, title, description }: ProjectMobileProps) {
               <polyline points="7 7 17 7 17 17" />
             </svg>
           </span>
-          <span className="hover:scale-125 hover:cursor-pointer text-slate-300 hover:text-white transition delay-100 duration-250 ease-in-out">
+          <span className="duration-250 text-slate-300 transition delay-100 ease-in-out hover:scale-125 hover:cursor-pointer hover:text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -52,7 +52,7 @@ function ProjectMobile({ image, title, description }: ProjectMobileProps) {
           </span>
         </div>
       </div>
-      <p className="text-base pt-4">{description}</p>
+      <p className="pt-4 text-base">{description}</p>
     </div>
   );
 }
