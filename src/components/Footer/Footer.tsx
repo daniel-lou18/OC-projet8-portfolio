@@ -17,7 +17,7 @@ function Footer() {
 
   return (
     <motion.footer
-      className="relative h-screen w-full overflow-hidden bg-neutral-100 pt-56"
+      className="relative h-screen w-full overflow-hidden bg-neutral-100 pt-56 text-slate-950"
       ref={footerRef}
       style={{ y: scrollY }}
     >

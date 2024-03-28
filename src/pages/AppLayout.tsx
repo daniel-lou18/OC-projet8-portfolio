@@ -16,10 +16,8 @@ function AppLayout() {
 
   return (
     <ReactLenis root>
-      <div className="text-slate-950">
-        <Header />
-        <Outlet />
-      </div>
+      <Header />
+      <Outlet />
     </ReactLenis>
   );
 }

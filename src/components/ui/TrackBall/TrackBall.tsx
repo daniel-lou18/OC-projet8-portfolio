@@ -32,9 +32,9 @@ function TrackBall({
   }
 
   return (
-    <Reveal>
+    <Reveal amount={0.2}>
       <motion.div
-        className={`${position} flex rounded-full overflow-hidden justify-center items-center hover:cursor-pointer z-30 ${styles.trackball} ${styles[style]}`}
+        className={`${position} z-30 flex items-center justify-center overflow-hidden rounded-full hover:cursor-pointer ${styles.trackball} ${styles[style]}`}
         animate={{
           translateX: mouseX,
           translateY: mouseY,

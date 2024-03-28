@@ -16,11 +16,11 @@ function HeaderDesktop({
   handleClick,
 }: HeaderDesktopProps) {
   return (
-    <div className="lg:block hidden">
+    <div className="hidden text-slate-950 lg:block">
       <AnimatePresence initial={false}>
         {showHeader && (
           <motion.header
-            className="justify-between w-full h-16 top-4 z-20 px-[8%] flex items-center fixed"
+            className="fixed top-4 z-20 flex h-16 w-full items-center justify-between px-[8%]"
             initial={{ y: -125 }}
             animate={{ y: 0 }}
             exit={{ y: -125 }}

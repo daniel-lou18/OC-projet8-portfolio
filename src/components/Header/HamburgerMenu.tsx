@@ -20,7 +20,7 @@ function HamburgerMenu({ isVisible, handleClick }: HamburgerMenuProps) {
       {isVisible && (
         <>
           <motion.div
-            className="fixed left-0 top-0 w-0 md:w-full h-full z-40 backdrop-filter backdrop-brightness-50"
+            className="fixed left-0 top-0 z-40 h-full w-0 text-slate-950 backdrop-brightness-50 backdrop-filter md:w-full"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -29,7 +29,7 @@ function HamburgerMenu({ isVisible, handleClick }: HamburgerMenuProps) {
             onClick={clickOutside}
           ></motion.div>
           <motion.div
-            className="fixed h-screen w-screen lg:w-1/3 px-8 md:px-12 pt-40 pb-16 right-0 bg-gray-900 text-slate-100 text-3xl z-40"
+            className="fixed right-0 z-40 h-screen w-screen bg-gray-900 px-8 pb-16 pt-40 text-3xl text-slate-100 md:px-12 lg:w-1/3"
             initial={{ translateX: 1500 }}
             animate={{ translateX: 0 }}
             exit={{ translateX: 1500 }}

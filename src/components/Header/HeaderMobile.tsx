@@ -11,7 +11,7 @@ function HeaderMobile({
   handleClick,
 }: HeaderMobileProps) {
   return (
-    <div className="fixed z-50 flex items-center justify-between pl-[8%] pt-8 lg:hidden">
+    <div className="fixed z-50 flex items-center justify-between pl-[8%] pt-8 text-slate-950 lg:hidden">
       <AnimatePresence>
         {showHeader && !showMenu && (
           <motion.div

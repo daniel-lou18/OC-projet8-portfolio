@@ -35,7 +35,7 @@ const projects = [
 
 function Main() {
   return (
-    <main className="w-full bg-gradient-to-br from-neutral-100 to-neutral-300">
+    <main className="w-full bg-gradient-to-br from-neutral-100 to-neutral-300 text-slate-950">
       <div className="relative overflow-hidden">
         <Hero />
         <Summary />
