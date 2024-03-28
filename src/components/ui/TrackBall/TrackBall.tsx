@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { MouseEvent, PropsWithChildren, useState } from "react";
 import styles from "./trackball.module.css";
-import Reveal from "../Reveal/Reveal";
 
 type TrackBallProps = PropsWithChildren<{
   size?: number | string;
@@ -32,40 +31,38 @@ function TrackBall({
   }
 
   return (
-    <Reveal amount={0.2}>
+    <motion.div
+      className={`${position} z-30 flex items-center justify-center overflow-hidden rounded-full hover:cursor-pointer ${styles.trackball} ${styles[style]}`}
+      animate={{
+        translateX: mouseX,
+        translateY: mouseY,
+        transition: {
+          duration: 0.15,
+          type: "spring",
+          damping: 15,
+          stiffness: 250,
+        },
+      }}
+      style={{ width: size, height: size, ...coords }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={resetPosition}
+    >
       <motion.div
-        className={`${position} z-30 flex items-center justify-center overflow-hidden rounded-full hover:cursor-pointer ${styles.trackball} ${styles[style]}`}
         animate={{
-          translateX: mouseX,
-          translateY: mouseY,
-          transition: {
-            duration: 0.15,
-            type: "spring",
-            damping: 15,
-            stiffness: 250,
-          },
+          translateX: mouseX * 1.1,
+          translateY: mouseY * 1.1,
         }}
-        style={{ width: size, height: size, ...coords }}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={resetPosition}
+        transition={{
+          duration: 0.35,
+          type: "spring",
+          damping: 15,
+          stiffness: 150,
+        }}
+        className="text-neutral-100"
       >
-        <motion.div
-          animate={{
-            translateX: mouseX * 1.1,
-            translateY: mouseY * 1.1,
-          }}
-          transition={{
-            duration: 0.35,
-            type: "spring",
-            damping: 15,
-            stiffness: 150,
-          }}
-          className="text-neutral-100"
-        >
-          {children}
-        </motion.div>
+        {children}
       </motion.div>
-    </Reveal>
+    </motion.div>
   );
 }
 
