@@ -45,7 +45,7 @@ function ProjectInfo({
       }}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: window.innerWidth >= 1280 ? 0.8 : 0.5 }}
       variants={cardVariants}
     >
       <motion.div

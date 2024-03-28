@@ -15,10 +15,10 @@ type GalleryProps = {
 function Gallery({ projects }: GalleryProps) {
   return (
     <section
-      className="w-full text-slate-100 pt-8 bg-black pb-24 relative z-10"
+      className="relative z-10 w-full bg-black pb-24 pt-8 text-slate-100"
       id="works"
     >
-      <h2 className="w-fit text-slate-300 pl-[8%] sticky">Réalisations</h2>
+      <h2 className="sticky w-fit pl-[8%] text-slate-300">Réalisations</h2>
       {projects.map((project, id) => (
         <Project {...project} key={id} />
       ))}

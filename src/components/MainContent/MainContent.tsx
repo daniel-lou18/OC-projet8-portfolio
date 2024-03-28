@@ -36,10 +36,8 @@ const projects = [
 function Main() {
   return (
     <main className="w-full bg-gradient-to-br from-neutral-100 to-neutral-300">
-      <div className="overflow-hidden">
-        <div className="relative">
-          <Hero />
-        </div>
+      <div className="relative overflow-hidden">
+        <Hero />
         <Summary />
       </div>
       <Gallery projects={projects} />

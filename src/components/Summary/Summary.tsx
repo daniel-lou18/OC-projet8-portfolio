@@ -31,13 +31,13 @@ function Summary() {
 
   return (
     <motion.section
-      className="w-full px-[8%] pt-48 md:h-screen"
+      className="w-full px-[8%] pt-48 lg:h-screen"
       ref={ref}
       style={{ y: position }}
       id="about"
     >
       <h2 className="mb-12">A propos</h2>
-      <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
         {cardsData.map((cardData) => (
           <Card key={cardData.id} {...cardData} />
         ))}

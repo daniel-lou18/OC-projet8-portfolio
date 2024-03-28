@@ -16,14 +16,14 @@ function Hero() {
   return (
     <>
       <Blob />
-      <motion.div
+      <motion.section
         className="flex h-screen w-full flex-col justify-end overflow-hidden px-[8%] pb-16 pt-56 md:justify-between md:pb-0"
         ref={ref}
       >
         <HeroTitle />
         <HeroBall x={scrollBall} />
         <HeroButtons />
-      </motion.div>
+      </motion.section>
     </>
   );
 }
