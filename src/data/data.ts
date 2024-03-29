@@ -16,7 +16,7 @@ export const projects = [
     description:
       "Développement du back-end pour un site de notation de livres avec Node JS, Express et MongoDB. Mise en place des opérations CRUD, de l'authentification sécurisée et du téléchargement d'images ",
     image: imgBooks,
-    websiteUrl: "https://spotilite-v1.netlify.app/",
+    websiteUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend",
   },
   {

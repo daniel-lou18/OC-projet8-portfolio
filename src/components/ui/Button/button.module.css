@@ -1,4 +1,4 @@
-.button::after {
+.button:not(.transparent)::after {
   position: absolute;
   z-index: -1;
   top: 100%;
@@ -41,6 +41,10 @@
   }
 }
 
+.button {
+  border: 1px solid rgb(163 163 163);
+}
+
 .regular {
   padding: 1rem 2rem;
 }
@@ -56,4 +60,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.button.transparent {
+  border: none;
+  height: 100%;
+  overflow: visible;
+}
+
+.button.transparent:hover {
+  color: #64748b;
+}
+
+.button.transparent:hover svg {
+  stroke: #64748b;
+}
+
+.button.transparent:hover svg:global(.feather-github) {
+  fill: #64748b;
 }

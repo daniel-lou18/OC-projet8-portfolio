@@ -18,7 +18,7 @@ function Button(props: ButtonProps | AnchorProps) {
   if (otherProps.type === "button") {
     return (
       <button
-        className={`relative z-30 overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
+        className={`relative z-30 overflow-hidden whitespace-nowrap rounded-full text-sm lg:text-base ${styles.button} ${styles[className]}`}
         {...otherProps}
       >
         {children}
@@ -28,7 +28,7 @@ function Button(props: ButtonProps | AnchorProps) {
 
   return (
     <a
-      className={`relative z-30 inline-flex w-fit items-center justify-center overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
+      className={`relative z-30 inline-flex w-fit items-center justify-center overflow-hidden whitespace-nowrap rounded-full text-sm lg:text-base ${styles.button} ${styles[className]}`}
       {...otherProps}
     >
       {children}
