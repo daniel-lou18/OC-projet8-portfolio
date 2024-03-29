@@ -14,7 +14,7 @@ export const projects = [
   {
     title: "Mon Vieux Grimoire",
     description:
-      "Développement du back-end pour un site de notation de livres avec Node JS, Express et MongoDB. Mise en place des opérations CRUD, de l'authentifcation sécurisée et du téléchargement d'images ",
+      "Développement du back-end pour un site de notation de livres avec Node JS, Express et MongoDB. Mise en place des opérations CRUD, de l'authentification sécurisée et du téléchargement d'images ",
     image: imgBooks,
     websiteUrl: "https://spotilite-v1.netlify.app/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend",

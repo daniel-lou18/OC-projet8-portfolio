@@ -13,10 +13,14 @@ function ContactInfo() {
         </p>
         <div className="flex flex-col gap-4 pb-8 pt-6 md:gap-8 md:pb-0 md:pt-12">
           <MyLink to="mailto:danielderudder@gmail.com">
-            <Button>danielderudder@gmail.com</Button>
+            <Button className="regular" type="button">
+              danielderudder@gmail.com
+            </Button>
           </MyLink>
           <MyLink to="tel:+33658424650">
-            <Button>+33 (0)6 58 42 46 50</Button>
+            <Button className="regular" type="button">
+              +33 (0)6 58 42 46 50
+            </Button>
           </MyLink>
         </div>
       </Reveal>

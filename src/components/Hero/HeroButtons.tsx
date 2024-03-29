@@ -2,6 +2,7 @@ import { useLenis } from "@studio-freight/react-lenis";
 import Button from "../ui/Button/Button";
 import Reveal from "../ui/Reveal/Reveal";
 import MyLink from "../ui/MyLink";
+import monCV from "../../assets/Derudder_Daniel_CV_2024.pdf";
 
 function HeroButtons() {
   const lenis = useLenis();
@@ -9,11 +10,13 @@ function HeroButtons() {
   return (
     <div className="flex gap-8 py-8 pt-24 md:my-4 md:pt-0">
       <Reveal style="fit" amount={0.1}>
-        <Button className="bigPill">Télécharger mon CV</Button>
+        <Button className="bigPill" type="anchor" download={true} href={monCV}>
+          Télécharger mon CV
+        </Button>
       </Reveal>
       <Reveal style="fit" amount={0.1}>
         <MyLink to="/#about" onClick={() => lenis?.scrollTo("#about")}>
-          <Button px={0} py={0} className="bigRound">
+          <Button className="bigRound" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"

@@ -1,19 +1,38 @@
-import { PropsWithChildren } from "react";
+import { ComponentPropsWithoutRef, PropsWithChildren } from "react";
 import styles from "./button.module.css";
 
 type ButtonProps = PropsWithChildren<{
-  px?: number;
-  py?: number;
-  className?: string;
-}>;
+  className: string;
+  type: "button";
+}> &
+  ComponentPropsWithoutRef<"button">;
 
-function Button({ children, className = "regular" }: ButtonProps) {
+type AnchorProps = PropsWithChildren<{
+  className: string;
+  type: "anchor";
+}> &
+  ComponentPropsWithoutRef<"a">;
+
+function Button(props: ButtonProps | AnchorProps) {
+  const { className, children, ...otherProps } = props;
+  if (otherProps.type === "button") {
+    return (
+      <button
+        className={`relative z-30 overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
+        {...otherProps}
+      >
+        {children}
+      </button>
+    );
+  }
+
   return (
-    <button
-      className={`relative z-30 overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
+    <a
+      className={`relative z-30 inline-block overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
+      {...otherProps}
     >
       {children}
-    </button>
+    </a>
   );
 }
 
