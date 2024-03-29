@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { structuredData } from "../../data/data";
 
 type MetaTagsProps = {
   title: string;
@@ -22,6 +23,9 @@ function MetaTags({ title, description, name, type, url }: MetaTagsProps) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:url" content={url} />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
     </Helmet>
   );
 }
