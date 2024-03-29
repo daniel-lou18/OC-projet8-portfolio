@@ -28,7 +28,7 @@ function Button(props: ButtonProps | AnchorProps) {
 
   return (
     <a
-      className={`relative z-30 inline-block overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
+      className={`relative z-30 inline-flex items-center justify-center overflow-hidden whitespace-nowrap rounded-full border border-solid border-neutral-400 text-sm lg:text-base ${styles.button} ${styles[className]}`}
       {...otherProps}
     >
       {children}
