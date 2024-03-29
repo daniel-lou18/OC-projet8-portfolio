@@ -33,3 +33,13 @@
 .hamburger.cross::before {
   transform: translateY(-400%) rotate(-45deg);
 }
+
+@media screen and (max-width: 1024px) {
+  .hamburger.cross::after {
+    transform: translateY(320%) rotate(45deg);
+  }
+
+  .hamburger.cross::before {
+    transform: translateY(-320%) rotate(-45deg);
+  }
+}

@@ -22,7 +22,7 @@ export const projects = [
   {
     title: "Kasa",
     description:
-      "Création du front-end pour une agence de location immobilière avec React et React Router. Mise en place de la navigation côté client et l'affichage dynamique des différents composants. Utiliser Sass pour la mise en forme.",
+      "Création du front-end pour une agence de location immobilière avec React et React Router. Mise en place de la navigation côté client et de l'affichage dynamique des différents composants. Utilistation de Sass pour la mise en forme.",
     image: imgKasa,
     websiteUrl: "https://daniel-oc-projet6-kasa.netlify.app/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet6-Kasa",
