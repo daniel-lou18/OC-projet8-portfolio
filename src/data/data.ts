@@ -55,3 +55,12 @@ export const skills = [
   { name: "TypeScript", rating: 5 },
   { name: "Sass/Tailwind", rating: 5 },
 ];
+
+export const metaTagsData = {
+  title: "Daniel Derudder - Développeur web",
+  description:
+    "Développeur front-end trilingue sur Paris, je crée des sites internet et applications web",
+  name: "Daniel Derudder",
+  type: "website",
+  url: "https://danielderudder.netlify.app/",
+};

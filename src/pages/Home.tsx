@@ -1,16 +1,12 @@
 import Footer from "../components/Footer/Footer";
 import MainContent from "../components/MainContent/MainContent";
-import { Helmet } from "react-helmet-async";
+import MetaTags from "../components/ui/MetaTags/MetaTags";
+import { metaTagsData } from "../data/data";
 
 function Home() {
   return (
     <>
-      <Helmet>
-        <meta
-          name="description"
-          content="Développeur front-end trilingue sur Paris, je crée des sites internet et applications web"
-        ></meta>
-      </Helmet>
+      <MetaTags {...metaTagsData} />
       <MainContent />
       <Footer />
     </>

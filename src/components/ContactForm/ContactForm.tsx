@@ -11,7 +11,7 @@ function ContactForm() {
 
   return (
     <form
-      className="grid min-h-screen w-full grid-cols-1 overflow-hidden px-[8%] pb-16 pt-48 text-slate-950 md:grid-cols-3 md:pb-8"
+      className="relative grid min-h-screen w-full grid-cols-1 overflow-hidden px-[8%] pb-16 pt-48 text-slate-950 md:grid-cols-3 md:pb-8"
       ref={formRef}
       onSubmit={handleFormSubmit}
     >
@@ -26,7 +26,9 @@ function ContactForm() {
           isSuccess={isSuccess}
         />
       </div>
-      <p className="absolute bottom-4 text-gray-200">© 2024 Daniel Derudder</p>
+      <p className="absolute bottom-4 px-[8%] text-gray-200">
+        © 2024 Daniel Derudder
+      </p>
     </form>
   );
 }

@@ -1,4 +1,3 @@
-import Button from "../ui/Button/Button";
 import Reveal from "../ui/Reveal/Reveal";
 
 type CardProps = {
