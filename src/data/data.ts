@@ -63,7 +63,8 @@ export const metaTagsData = {
   name: "Daniel Derudder",
   type: "website",
   url: "https://danielderudder.netlify.app/",
-  image: "/avatar-(ProfilePictureMaker.com).png",
+  image:
+    "https://danielderudder.netlify.app/avatar-(ProfilePictureMaker.com).png",
 };
 
 export const structuredData = {
@@ -78,7 +79,8 @@ export const structuredData = {
   ],
   description:
     "Développeur front-end trilingue sur Paris, je crée des sites internet et applications web",
-  image: "/avatar-(ProfilePictureMaker.com).png",
+  image:
+    "https://danielderudder.netlify.app/avatar-(ProfilePictureMaker.com).png",
   address: {
     "@type": "136 rue Lamarck",
     addressLocality: "Paris",
