@@ -11,6 +11,7 @@ type MetaTagsProps = {
 function MetaTags({ title, description, name, type, url }: MetaTagsProps) {
   return (
     <Helmet>
+      <meta name="robots" content="index" />
       <meta name="description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />

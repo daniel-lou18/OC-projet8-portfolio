@@ -4,7 +4,7 @@ import TrackBall from "../ui/TrackBall/TrackBall";
 
 function Links() {
   return (
-    <div className="w-fit ml-auto mr-auto flex gap-6 mt-12">
+    <div className="ml-auto mr-auto mt-12 flex w-fit gap-6">
       <Reveal>
         <MyLink to="https://github.com/daniel-lou18" target="_blank">
           <TrackBall position="relative" style="transparent">
@@ -29,7 +29,7 @@ function Links() {
       </Reveal>
       <Reveal>
         <MyLink
-          to="https://www.linkedin.com/in/daniel-derudder-b4711a2b/"
+          to="https://www.linkedin.com/in/daniel-derudder/"
           target="_blank"
         >
           <TrackBall position="relative" style="transparent">

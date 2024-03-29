@@ -64,3 +64,27 @@ export const metaTagsData = {
   type: "website",
   url: "https://danielderudder.netlify.app/",
 };
+
+export const structuredData = {
+  "@context": "http://schema.org",
+  "@type": "Person",
+  name: "Daniel Derudder",
+  jobTitle: "Développeur web",
+  url: "https://danielderudder.netlify.app/",
+  sameAs: [
+    "https://github.com/daniel-lou18",
+    "https://www.linkedin.com/in/daniel-derudder",
+  ],
+  description:
+    "Développeur front-end trilingue sur Paris, je crée des sites internet et applications web",
+  image:
+    "https://danielderudder.netlify.app/avatar-(ProfilePictureMaker.com).png",
+  address: {
+    "@type": "136 rue Lamarck",
+    addressLocality: "Paris",
+    addressRegion: "Île de France",
+    addressCountry: "France",
+  },
+  email: "danielderudder@gmail.com",
+  telephone: "06 58 42 46 50",
+};
