@@ -26,7 +26,7 @@ function Footer() {
           Me contacter
         </h2>
         <Line>
-          <MyLink to="/contact">
+          <MyLink to="/contact" onClick={() => window.scrollTo({ top: 0 })}>
             <TrackBall
               size="10rem"
               position="absolute"
@@ -50,6 +50,9 @@ function Footer() {
         </div>
       </div>
       <HorMovText>Travaillons ensemble !</HorMovText>
+      <p className="absolute bottom-4 px-[8%] text-sm text-gray-200">
+        © 2024 Daniel Derudder
+      </p>
     </motion.footer>
   );
 }

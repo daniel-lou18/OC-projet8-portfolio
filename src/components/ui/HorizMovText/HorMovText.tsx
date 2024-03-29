@@ -6,12 +6,12 @@ type HorMovTextProps = {
   duration?: number;
 };
 
-function HorMovText({ children, duration = 20 }: HorMovTextProps) {
+function HorMovText({ children, duration = 10 }: HorMovTextProps) {
   const delay = duration / 2;
 
   return (
     <>
-      <div className="absolute bottom-4 h-16 w-full overflow-hidden text-3xl font-bold text-gray-200 md:text-7xl lg:h-24 lg:text-8xl">
+      <div className="absolute bottom-8 h-16 w-full overflow-hidden text-3xl font-bold text-gray-200 md:text-7xl lg:h-24 lg:text-8xl">
         <motion.div
           animate={{
             x: [0, -window.innerWidth],

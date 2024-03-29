@@ -26,6 +26,7 @@ function ContactForm() {
           isSuccess={isSuccess}
         />
       </div>
+      <p className="absolute bottom-4 text-gray-200">© 2024 Daniel Derudder</p>
     </form>
   );
 }

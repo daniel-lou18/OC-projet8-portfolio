@@ -6,6 +6,7 @@ function Navbar({ style = "row", handleClick }: NavbarProps) {
   function handleClickCol() {
     if (style === "row") return;
     handleClick?.();
+    window.scrollTo({ top: 0 });
   }
 
   return (

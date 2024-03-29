@@ -2,7 +2,7 @@ import Reveal from "../ui/Reveal/Reveal";
 
 function FormFields() {
   return (
-    <Reveal>
+    <Reveal amount={0.1}>
       <div className="border-b border-gray-900/10 pb-12">
         <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div className="col-start-1 col-end-7 md:col-start-2 lg:col-span-3">
