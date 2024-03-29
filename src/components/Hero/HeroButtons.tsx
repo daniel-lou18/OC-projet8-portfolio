@@ -15,8 +15,16 @@ function HeroButtons() {
         </Button>
       </Reveal>
       <Reveal style="fit" amount={0.1}>
-        <MyLink to="/#about" onClick={() => lenis?.scrollTo("#about")}>
-          <Button className="bigRound" type="button">
+        <MyLink
+          to="/#about"
+          onClick={() => lenis?.scrollTo("#about")}
+          aria-label="A Propos"
+        >
+          <Button
+            className="bigRound"
+            type="button"
+            aria-label="arrow-down-right"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="28"

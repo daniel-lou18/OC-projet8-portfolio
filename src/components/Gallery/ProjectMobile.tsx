@@ -26,13 +26,14 @@ function ProjectMobile({
         />
       </div>
       <div className="flex justify-between gap-4 border-b-[1px] border-solid border-slate-100 pb-4 pt-8">
-        <h3 className="uppercase">{title}</h3>
+        <h4 className="uppercase">{title}</h4>
         <div className="flex gap-4">
           <Button
             type="anchor"
             href={websiteUrl}
             target="_blank"
             className="transparent"
+            aria-label="website"
           >
             <span className="duration-250 text-xl transition delay-100 ease-in-out hover:scale-125 hover:cursor-pointer">
               <svg
@@ -57,6 +58,7 @@ function ProjectMobile({
             href={gitHubUrl}
             target="_blank"
             className="transparent"
+            aria-label="GitHub"
           >
             <span className="duration-250 text-slate-300 transition delay-100 ease-in-out hover:scale-125 hover:cursor-pointer hover:text-white">
               <svg

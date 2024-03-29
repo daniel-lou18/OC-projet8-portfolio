@@ -18,7 +18,7 @@ function Gallery({ projects }: GalleryProps) {
       className="relative z-10 w-full bg-black pb-24 pt-8 text-slate-100"
       id="works"
     >
-      <h2 className="sticky w-fit pl-[8%] text-slate-300">Réalisations</h2>
+      <h3 className="sticky w-fit pl-[8%] text-slate-100">Réalisations</h3>
       {projects.map((project, id) => (
         <Project {...project} key={id} />
       ))}

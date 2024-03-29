@@ -17,12 +17,12 @@ const ProjectImage = forwardRef<HTMLDivElement, ProjectImageProps>(
         style={{ scale, filter }}
         ref={ref}
       >
-        <motion.h3
+        <motion.h4
           className="absolute left-40 top-1/3 z-20 mb-4 w-96 whitespace-pre-wrap text-6xl font-bold"
           style={{ y, scale }}
         >
           {title}
-        </motion.h3>
+        </motion.h4>
         <div className="relative h-[60vh] w-3/5 overflow-hidden rounded-md shadow-xl">
           <img
             src={image}

@@ -25,7 +25,7 @@ function HorMovText({ children, duration = 10 }: HorMovTextProps) {
           }}
           className="absolute whitespace-nowrap"
         >
-          <h3>{children}</h3>
+          <div>{children}</div>
         </motion.div>
         <motion.div
           animate={{
@@ -40,7 +40,7 @@ function HorMovText({ children, duration = 10 }: HorMovTextProps) {
           }}
           className="absolute whitespace-nowrap"
         >
-          <h3>{children}</h3>
+          <div>{children}</div>
         </motion.div>
       </div>
     </>

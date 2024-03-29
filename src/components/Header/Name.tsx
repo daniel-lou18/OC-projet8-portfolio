@@ -1,10 +1,10 @@
 import image from "../../assets/images/PHOTO UP-20211120-Vermogen-82.jpg";
-import { Link } from "react-router-dom";
 import styles from "./name.module.css";
+import MyLink from "../ui/MyLink";
 
 function Name() {
   return (
-    <Link to="/">
+    <MyLink to="/" aria-label="Page d'accueil">
       <div className="relative flex items-center gap-6 text-xl">
         <div className="hidden h-[50px] w-[50px] shrink-0 overflow-hidden rounded-full bg-white opacity-75 lg:block">
           <img
@@ -22,7 +22,7 @@ function Name() {
           <div className={`overflow-hidden ${styles.name}`}>erudder</div>
         </div>
       </div>
-    </Link>
+    </MyLink>
   );
 }
 

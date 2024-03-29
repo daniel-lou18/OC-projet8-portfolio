@@ -60,6 +60,7 @@ function ProjectInfo({
             href={websiteUrl}
             target="_blank"
             className="transparent"
+            aria-label="website"
           >
             <span className="duration-250 text-xl transition delay-100 ease-in-out hover:cursor-pointer">
               <svg
@@ -84,6 +85,7 @@ function ProjectInfo({
             href={gitHubUrl}
             target="_blank"
             className="transparent"
+            aria-label="GitHub"
           >
             <span className="duration-250 text-slate-300 transition delay-100 ease-in-out hover:cursor-pointer">
               <svg

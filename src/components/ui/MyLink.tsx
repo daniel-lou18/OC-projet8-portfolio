@@ -1,11 +1,11 @@
-import { PropsWithChildren } from "react";
+import { ComponentPropsWithoutRef, PropsWithChildren } from "react";
 import { Link } from "react-router-dom";
 
 type MyLinkProps = PropsWithChildren<{
   to: string;
   onClick?: () => void;
-  target?: string;
-}>;
+}> &
+  ComponentPropsWithoutRef<"a">;
 
 function MyLink({ children, ...otherProps }: MyLinkProps) {
   return <Link {...otherProps}>{children}</Link>;

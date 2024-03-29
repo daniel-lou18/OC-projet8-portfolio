@@ -55,10 +55,9 @@ nav:not(.h-full) a.active:not([href="/#about"])::after {
   display: initial;
 }
 
-h2:not(.contact-title) {
+h3:not(.contact-title) {
   text-transform: uppercase;
   font-size: 1rem;
-  color: rgb(100 116 139);
 }
 
 html.lenis,

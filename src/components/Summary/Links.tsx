@@ -6,7 +6,11 @@ function Links() {
   return (
     <div className="ml-auto mr-auto mt-12 flex w-fit gap-6">
       <Reveal>
-        <MyLink to="https://github.com/daniel-lou18" target="_blank">
+        <MyLink
+          to="https://github.com/daniel-lou18"
+          target="_blank"
+          aria-label="GitHub Daniel Derudder"
+        >
           <TrackBall position="relative" style="transparent">
             <span>
               <svg
@@ -31,6 +35,7 @@ function Links() {
         <MyLink
           to="https://www.linkedin.com/in/daniel-derudder/"
           target="_blank"
+          aria-label="LinkedIn Daniel Derudder"
         >
           <TrackBall position="relative" style="transparent">
             <span>
@@ -55,7 +60,11 @@ function Links() {
         </MyLink>
       </Reveal>
       <Reveal>
-        <MyLink to="https://leetcode.com/daniel-lou18/" target="_blank">
+        <MyLink
+          to="https://leetcode.com/daniel-lou18/"
+          target="_blank"
+          aria-label="Leetcode Daniel Derudder"
+        >
           <TrackBall position="relative" style="transparent">
             <svg
               xmlns="http://www.w3.org/2000/svg"

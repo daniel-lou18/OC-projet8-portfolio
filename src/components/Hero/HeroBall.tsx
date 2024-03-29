@@ -11,7 +11,11 @@ function HeroBall({ x }: { x: MotionValue }) {
   return (
     <Reveal>
       <Line>
-        <MyLink to="/#works" onClick={() => lenis?.scrollTo("#works")}>
+        <MyLink
+          to="/#works"
+          onClick={() => lenis?.scrollTo("#works")}
+          aria-label="Réalisations"
+        >
           <TrackBall
             size={150}
             coords={{ top: 0, right: 0, y: "-50%", x }}

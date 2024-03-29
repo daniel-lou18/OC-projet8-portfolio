@@ -19,7 +19,7 @@ function Summary() {
       style={{ y: position }}
       id="about"
     >
-      <h2 className="mb-12">A propos</h2>
+      <h3 className="mb-12">A propos</h3>
       <div className="grid grid-cols-1 gap-16 lg:grid-cols-3">
         {cardsData.map((cardData) => (
           <Card key={cardData.id} {...cardData} />

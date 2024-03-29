@@ -24,6 +24,7 @@ function Card({ id, title, text }: CardProps) {
             target="_blank"
             href="https://www.derudder-traduction.fr"
             className="text-lg hover:underline"
+            aria-label="website Derudder Traduction"
           >
             www.derudder-traduction.fr
           </a>

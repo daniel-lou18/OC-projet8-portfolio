@@ -22,11 +22,15 @@ function Footer() {
       style={{ y: scrollY }}
     >
       <div className="w-full px-[8%]">
-        <h2 className="contact-title relative pb-28 text-4xl md:text-8xl">
+        <h3 className="contact-title relative pb-28 text-4xl md:text-8xl">
           Me contacter
-        </h2>
+        </h3>
         <Line>
-          <MyLink to="/contact" onClick={() => window.scrollTo({ top: 0 })}>
+          <MyLink
+            to="/contact"
+            onClick={() => window.scrollTo({ top: 0 })}
+            aria-label="Contact"
+          >
             <TrackBall
               size="10rem"
               position="absolute"
