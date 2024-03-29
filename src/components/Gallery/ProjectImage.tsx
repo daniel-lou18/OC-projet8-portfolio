@@ -28,6 +28,7 @@ const ProjectImage = forwardRef<HTMLDivElement, ProjectImageProps>(
             src={image}
             className="h-full w-full object-cover object-top"
             style={{ filter: "brightness(0.8)" }}
+            alt={`projet réalisé - ${title}`}
           />
         </div>
       </motion.div>

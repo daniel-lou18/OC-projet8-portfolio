@@ -6,12 +6,16 @@ function Name() {
   return (
     <Link to="/">
       <div className="relative flex items-center gap-6 text-xl">
-        <div className="w-[50px] h-[50px] rounded-full overflow-hidden bg-white opacity-75 lg:block hidden shrink-0">
-          <img src={image} className="w-full h-full" />
+        <div className="hidden h-[50px] w-[50px] shrink-0 overflow-hidden rounded-full bg-white opacity-75 lg:block">
+          <img
+            src={image}
+            className="h-full w-full"
+            alt="photo de profil de Daniel Derudder"
+          />
         </div>
         <div className={`flex ${styles.fullName} uppercase`}>
           <div>D</div>
-          <div className={`overflow-hidden flex ${styles.name}`}>
+          <div className={`flex overflow-hidden ${styles.name}`}>
             aniel <div className="w-1"></div>
           </div>
           <div>D</div>

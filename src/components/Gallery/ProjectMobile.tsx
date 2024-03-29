@@ -22,6 +22,7 @@ function ProjectMobile({
           src={image}
           className="h-full w-full object-cover object-top"
           style={{ filter: "brightness(0.8)" }}
+          alt={`projet réalisé - ${title}`}
         />
       </div>
       <div className="flex justify-between gap-4 border-b-[1px] border-solid border-slate-100 pb-4 pt-8">
