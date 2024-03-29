@@ -1,3 +1,4 @@
+import Button from "../ui/Button/Button";
 import Reveal from "../ui/Reveal/Reveal";
 
 type CardProps = {
@@ -19,6 +20,15 @@ function Card({ id, title, text }: CardProps) {
       </Reveal>
       <Reveal>
         <p className="text-lg">{text}</p>
+        {id === 2 && (
+          <a
+            target="_blank"
+            href="https://www.derudder-traduction.fr"
+            className="text-lg hover:underline"
+          >
+            www.derudder-traduction.fr
+          </a>
+        )}
       </Reveal>
     </article>
   );

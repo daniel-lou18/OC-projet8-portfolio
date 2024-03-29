@@ -38,7 +38,7 @@ export const cardsData = [
   {
     id: 2,
     title: "Expérience",
-    text: "J'ai plus de 10 ans d'expérience professionnelle en tant que traducteur indépendant français-néerlandais. Je parle également couramment l'anglais.",
+    text: "J'ai plus de 10 ans d'expérience professionnelle en tant que traducteur indépendant français-néerlandais. Je parle également couramment l'anglais. Voici mon ancien site professionnel :",
   },
   {
     id: 3,
