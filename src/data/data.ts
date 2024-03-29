@@ -63,6 +63,8 @@ export const metaTagsData = {
   name: "Daniel Derudder",
   type: "website",
   url: "https://danielderudder.netlify.app/",
+  image:
+    "https://danielderudder.netlify.app/avatar-(ProfilePictureMaker.com).png",
 };
 
 export const structuredData = {
