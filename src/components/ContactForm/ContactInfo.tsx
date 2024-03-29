@@ -1,5 +1,4 @@
 import Button from "../ui/Button/Button";
-import MyLink from "../ui/MyLink";
 import Reveal from "../ui/Reveal/Reveal";
 
 function ContactInfo() {
@@ -12,16 +11,16 @@ function ContactInfo() {
           mail !
         </p>
         <div className="flex flex-col gap-4 pb-8 pt-6 md:gap-8 md:pb-0 md:pt-12">
-          <MyLink to="mailto:danielderudder@gmail.com">
-            <Button className="regular" type="button">
-              danielderudder@gmail.com
-            </Button>
-          </MyLink>
-          <MyLink to="tel:+33658424650">
-            <Button className="regular" type="button">
-              +33 (0)6 58 42 46 50
-            </Button>
-          </MyLink>
+          <Button
+            className="regular"
+            type="anchor"
+            href="mailto:danielderudder@gmail.com"
+          >
+            danielderudder@gmail.com
+          </Button>
+          <Button className="regular" type="anchor" href="tel:+33658424650">
+            +33 (0)6 58 42 46 50
+          </Button>
         </div>
       </Reveal>
     </div>

@@ -39,7 +39,7 @@ function ProjectInfo({
     <motion.div
       className="absolute top-[30%] hidden w-4/5 overflow-hidden rounded-2xl p-6 md:left-[65%] md:top-32 md:block md:w-[22%] xl:p-8"
       style={{
-        backgroundColor: "rgba(255,255,255,0.2)",
+        backgroundColor: "rgba(100,100,100,0.3)",
         backdropFilter,
         scale,
       }}

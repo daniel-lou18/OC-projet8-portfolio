@@ -37,16 +37,16 @@ function Footer() {
           </MyLink>
         </Line>
         <div className="flex flex-col gap-8 pt-28 md:flex-row md:pt-16">
-          <MyLink to="mailto:danielderudder@gmail.com">
-            <Button className="regular" type="button">
-              danielderudder@gmail.com
-            </Button>
-          </MyLink>
-          <MyLink to="tel:+33658424650">
-            <Button className="regular" type="button">
-              +33 (0)6 58 42 46 50
-            </Button>
-          </MyLink>
+          <Button
+            className="regular"
+            type="anchor"
+            href="mailto:danielderudder@gmail.com"
+          >
+            danielderudder@gmail.com
+          </Button>
+          <Button className="regular" type="anchor" href="tel:+33658424650">
+            +33 (0)6 58 42 46 50
+          </Button>
         </div>
       </div>
       <HorMovText>Travaillons ensemble !</HorMovText>
