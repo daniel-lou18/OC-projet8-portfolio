@@ -7,8 +7,8 @@ type MyLinkProps = PropsWithChildren<{
   target?: string;
 }>;
 
-function MyLink({ children, ...restProps }: MyLinkProps) {
-  return <Link {...restProps}>{children}</Link>;
+function MyLink({ children, ...otherProps }: MyLinkProps) {
+  return <Link {...otherProps}>{children}</Link>;
 }
 
 export default MyLink;
