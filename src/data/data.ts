@@ -6,7 +6,7 @@ export const projects = [
   {
     title: "SpotiLite",
     description:
-      "Une application de musique créée avec React, en utilisant l'API de Spotify pour les données, le Context API pour le state management et Supabase pour les données utilisateur et l'authentification.",
+      "Application musicale React utilisant l'API de Spotify pour les données audio, Context API pour la gestion d'état et Supabase pour l'authentification et les données utilisateur. Interface utilisateur intuitive et réactive pour rechercher, écouter et découvrir de la musique.",
     image: imgMusic,
     websiteUrl: "https://spotilite-v1.netlify.app/",
     gitHubUrl: "https://github.com/daniel-lou18/music-app",
@@ -14,7 +14,7 @@ export const projects = [
   {
     title: "Mon Vieux Grimoire",
     description:
-      "Développement du back-end pour un site de notation de livres avec Node JS, Express et MongoDB. Mise en place des opérations CRUD, de l'authentification sécurisée et du téléchargement d'images.",
+      "Développement d'un back-end robuste et évolutif pour un site web de notation de livres, en utilisant Node JS, Express et MongoDB. J'ai implémenté les opérations CRUD, une authentification sécurisée à l'aide de JSON Web Tokens, et le téléchargement et le stockage d'images.",
     image: imgBooks,
     websiteUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend",
@@ -22,7 +22,7 @@ export const projects = [
   {
     title: "Kasa",
     description:
-      "Création du front-end pour une agence de location immobilière avec React et React Router. Mise en place de la navigation côté client et de l'affichage dynamique des différents composants. Utilisation de Sass pour la mise en forme.",
+      "Création du front-end pour une agence de location immobilière en utilisant React et React Router. Mise en place d'une navigation fluide côté client, ainsi qu'un affichage dynamique des différents composants. L'utilisation de Sass facilite la maintenance du code CSS.",
     image: imgKasa,
     websiteUrl: "https://daniel-oc-projet6-kasa.netlify.app/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet6-Kasa",
@@ -33,17 +33,17 @@ export const cardsData = [
   {
     id: 1,
     title: "Développement web",
-    text: "En plus de mon diplôme de développeur web, j'ai suivi de nombreuses formations en ligne (Udemy, App Academy) et je dispose de solides bases en programmation fondamentale (LeetCode). Je travaille en permanence sur des projets personnels.",
+    text: "En plus de mon diplôme de développeur web, j'ai renforcé mes compétences en suivant des formations en ligne auprès de plateformes réputées telles qu'Udemy et App Academy. J'ai également acquis de solides bases en programmation fondamentale (ex. LeetCode). Je m'efforce constamment d'améliorer mes compétences en travaillant sur des projets personnels.",
   },
   {
     id: 2,
     title: "Expérience",
-    text: "J'ai plus de 10 ans d'expérience professionnelle en tant que traducteur indépendant français-néerlandais. Je parle également couramment l'anglais. Voici mon ancien site professionnel :",
+    text: "Fort de plus de 10 ans d'expérience en tant que traducteur indépendant français-néerlandais, je maîtrise parfaitement ces deux langues. Mon expertise linguistique s'étend également à l'anglais, que je parle couramment. Mon ancien site professionnel témoigne de mon engagement envers la qualité et la précision dans mes traductions :",
   },
   {
     id: 3,
     title: "Objectif",
-    text: "Mon objectif est une reconversion professionnelle orientée vers le développement web et mobile. Je suis impatient de mettre en pratique mes compétences qui évoluent continuellement.",
+    text: "Mon objectif est de réussir ma reconversion professionnelle dans le domaine du développement web. Je suis passionné par les nouvelles technologies et je suis déterminé à mettre en pratique mes compétences en constante évolution. Je suis impatient de relever de nouveaux défis et de contribuer à des projets innovants.",
   },
 ];
 
