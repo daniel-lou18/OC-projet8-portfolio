@@ -6,7 +6,7 @@ type HorMovTextProps = {
   duration?: number;
 };
 
-function HorMovText({ children, duration = 10 }: HorMovTextProps) {
+function HorMovText({ children, duration = 15 }: HorMovTextProps) {
   const delay = duration / 2;
 
   return (

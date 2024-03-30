@@ -6,7 +6,7 @@ export const projects = [
   {
     title: "SpotiLite",
     description:
-      "Une application de musique créée avec React, en utilisant l'API de Spotify pour les données, le Context API pour le state management et Supabase pour les données utilisateur et l'authentification",
+      "Une application de musique créée avec React, en utilisant l'API de Spotify pour les données, le Context API pour le state management et Supabase pour les données utilisateur et l'authentification.",
     image: imgMusic,
     websiteUrl: "https://spotilite-v1.netlify.app/",
     gitHubUrl: "https://github.com/daniel-lou18/music-app",
@@ -14,7 +14,7 @@ export const projects = [
   {
     title: "Mon Vieux Grimoire",
     description:
-      "Développement du back-end pour un site de notation de livres avec Node JS, Express et MongoDB. Mise en place des opérations CRUD, de l'authentification sécurisée et du téléchargement d'images ",
+      "Développement du back-end pour un site de notation de livres avec Node JS, Express et MongoDB. Mise en place des opérations CRUD, de l'authentification sécurisée et du téléchargement d'images.",
     image: imgBooks,
     websiteUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend",

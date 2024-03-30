@@ -4,10 +4,10 @@
 
 .name {
   max-width: 0px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .fullName:hover .name {
   max-width: 500px;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
