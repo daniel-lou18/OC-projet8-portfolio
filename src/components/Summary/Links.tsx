@@ -5,7 +5,7 @@ import TrackBall from "../ui/TrackBall/TrackBall";
 function Links() {
   return (
     <div className="ml-auto mr-auto mt-12 flex w-fit gap-6">
-      <Reveal>
+      <Reveal amount={0.1}>
         <MyLink
           to="https://github.com/daniel-lou18"
           target="_blank"

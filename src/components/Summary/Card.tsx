@@ -15,15 +15,15 @@ function Card({ id, title, text }: CardProps) {
         </div>
       </Reveal>
       <Reveal>
-        <h4 className="py-12 text-3xl">{title}</h4>
+        <h4 className="pb-8 pt-12 text-3xl">{title}</h4>
       </Reveal>
       <Reveal>
-        <p className="text-lg">{text}</p>
+        <p className="text-base">{text}</p>
         {id === 2 && (
           <a
             target="_blank"
             href="https://www.derudder-traduction.fr"
-            className="text-lg hover:underline"
+            className="text-base hover:underline"
             aria-label="website Derudder Traduction"
           >
             www.derudder-traduction.fr
