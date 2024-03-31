@@ -38,7 +38,7 @@ export const cardsData = [
   {
     id: 2,
     title: "Expérience",
-    text: "Fort de plus de 10 ans d'expérience en tant que traducteur indépendant français-néerlandais, je maîtrise parfaitement ces deux langues. Mon expertise linguistique s'étend également à l'anglais, que je parle couramment. Mon ancien site professionnel témoigne de mon engagement envers la qualité et la précision dans mes traductions :",
+    text: "Fort de plus de 10 ans d'expérience en tant que traducteur indépendant français-néerlandais, je maîtrise parfaitement ces deux langues. Mon expertise linguistique s'étend également à l'anglais, que je parle couramment. Mon ancien site professionnel témoigne de mon engagement envers la qualité et la précision dans mes traductions.",
   },
   {
     id: 3,
