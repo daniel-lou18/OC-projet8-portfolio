@@ -1,8 +1,17 @@
+import imgShopApp from "../assets/images/Balenciaga.webp";
 import imgMusic from "../assets/images/spotilite-searchpage.webp";
 import imgBooks from "../assets/images/Accueil.webp";
 import imgKasa from "../assets/images/D_Fiche-Logement.webp";
 
 export const projects = [
+  {
+    title: "Shop App",
+    description:
+      "Je travaille actuellement sur une application e-commerce full-stack avec Next JS 14, Auth.js, TypeScript, Tailwind CSS et Prisma ORM (PostgreSQL). État d'avancement du projet : 30% (mise en place de la boutique côté utilisateur et d'un CMS côté administrateur).",
+    image: imgShopApp,
+    websiteUrl: "https://shop-app-mu-pearl.vercel.app/",
+    gitHubUrl: "https://github.com/daniel-lou18/shop-app",
+  },
   {
     title: "SpotiLite",
     description:
