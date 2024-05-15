@@ -7,7 +7,7 @@ export const projects = [
   {
     title: "Shop App",
     description:
-      "Je travaille actuellement sur une application e-commerce full-stack avec Next JS 14, Auth.js, TypeScript, Tailwind CSS et Prisma ORM (PostgreSQL). État d'avancement du projet : 30% (mise en place de la boutique côté utilisateur et d'un CMS côté administrateur).",
+      "Je travaille actuellement sur une application e-commerce full-stack avec Next.js 14, Auth.js, TypeScript, Tailwind CSS et Prisma ORM (PostgreSQL). État d'avancement du projet : 30% (mise en place de la boutique côté utilisateur et d'un CMS côté administrateur).",
     image: imgShopApp,
     websiteUrl: "https://shop-app-mu-pearl.vercel.app/",
     gitHubUrl: "https://github.com/daniel-lou18/shop-app",
@@ -23,7 +23,7 @@ export const projects = [
   {
     title: "Mon Vieux Grimoire",
     description:
-      "Développement d'un back-end robuste et évolutif pour un site web de notation de livres, en utilisant Node JS, Express et MongoDB. J'ai implémenté les opérations CRUD, une authentification sécurisée à l'aide de JSON Web Tokens, et le téléchargement et le stockage d'images.",
+      "Développement d'un back-end robuste et évolutif pour un site web de notation de livres, en utilisant Node.js, Express et MongoDB. J'ai implémenté les opérations CRUD, une authentification sécurisée à l'aide de JSON Web Tokens, et le téléchargement et le stockage d'images.",
     image: imgBooks,
     websiteUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend/",
     gitHubUrl: "https://github.com/daniel-lou18/OC-projet7-grimoire-backend",
@@ -57,12 +57,13 @@ export const cardsData = [
 ];
 
 export const skills = [
-  { name: "HTML/CSS", rating: 8 },
-  { name: "JavaScript/React", rating: 8 },
-  { name: "NodeJS/Express", rating: 7 },
-  { name: "MongoDB/Mongoose", rating: 6 },
+  { name: "HTML 5 & CSS 3", rating: 8 },
+  { name: "JavaScript ES6 & React", rating: 8 },
+  { name: "Node, Express & MongoDB", rating: 6 },
+  { name: "Next.js 14", rating: 5 },
   { name: "TypeScript", rating: 5 },
-  { name: "Sass/Tailwind", rating: 5 },
+  { name: "Prisma + PostgreSQL", rating: 5 },
+  { name: "Sass & Tailwind CSS", rating: 5 },
 ];
 
 export const metaTagsData = {
