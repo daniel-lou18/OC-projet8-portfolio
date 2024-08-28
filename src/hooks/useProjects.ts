@@ -15,7 +15,8 @@ export function useProjects() {
       setError("");
       try {
         const projects = await getProjectsWithImage();
-        setProjects(projects);
+        const sortedProjects = projects.sort((a, b) => a.position - b.position);
+        setProjects(sortedProjects);
       } catch (err) {
         setError("An error occurred while fetching projects");
         console.error(err);

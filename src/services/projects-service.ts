@@ -6,6 +6,7 @@ type Project = {
   description: string;
   websiteUrl: string;
   gitHubUrl: string;
+  position: number;
   image: {
     asset: {
       _ref: string;
@@ -23,6 +24,7 @@ export async function getProjectsWithImage(): Promise<ProjectWithImage[]> {
     description,
     websiteUrl,
     gitHubUrl,
+    position,
     "image": image.asset->url
   }`;
 
