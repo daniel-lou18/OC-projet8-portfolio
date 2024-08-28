@@ -1,20 +1,9 @@
+import { ProjectWithImage } from "../../services/projects-service";
 import Button from "../ui/Button/Button";
 
-type ProjectMobileProps = {
-  image: string;
-  title: string;
-  description: string;
-  websiteUrl: string;
-  gitHubUrl: string;
-};
+function ProjectMobile({ project }: { project: ProjectWithImage }) {
+  const { image, title, description, websiteUrl, gitHubUrl } = project;
 
-function ProjectMobile({
-  image,
-  title,
-  description,
-  websiteUrl,
-  gitHubUrl,
-}: ProjectMobileProps) {
   return (
     <div className="mt-8 w-full">
       <div className="relative h-64 w-full overflow-hidden rounded-md shadow-xl">

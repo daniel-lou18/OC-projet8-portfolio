@@ -1,14 +1,12 @@
 import { useRef } from "react";
-import { Projects } from "./Gallery";
 import { useScroll, useTransform } from "framer-motion";
 import ProjectInfo from "./ProjectInfo";
 import ProjectImage from "./ProjectImage";
 import ProjectMobile from "./ProjectMobile";
+import { ProjectWithImage } from "../../services/projects-service";
 
-type ProjectProps = Projects;
-
-function Project(props: ProjectProps) {
-  const { title, description, image, websiteUrl, gitHubUrl } = props;
+function Project({ project }: { project: ProjectWithImage }) {
+  const { title, description, image, websiteUrl, gitHubUrl } = project;
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -53,7 +51,7 @@ function Project(props: ProjectProps) {
         />
       </div>
       <div className="relative w-full overflow-hidden px-[8%] pt-24 lg:hidden">
-        <ProjectMobile {...props} />
+        <ProjectMobile project={project} />
       </div>
     </>
   );

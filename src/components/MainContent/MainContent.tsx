@@ -2,7 +2,6 @@ import Gallery from "../Gallery/Gallery";
 import Hero from "../Hero/Hero";
 import Skills from "../Skills/Skills";
 import Summary from "../Summary/Summary";
-import { projects } from "../../data/data";
 
 function Main() {
   return (
@@ -11,7 +10,7 @@ function Main() {
         <Hero />
         <Summary />
       </div>
-      <Gallery projects={projects} />
+      <Gallery />
       <Skills />
     </main>
   );

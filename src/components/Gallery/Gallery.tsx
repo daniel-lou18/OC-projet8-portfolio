@@ -1,27 +1,29 @@
 import Project from "./Project";
+import { useProjects } from "../../hooks/useProjects";
 
-export type Projects = {
-  image: string;
-  title: string;
-  description: string;
-  websiteUrl: string;
-  gitHubUrl: string;
-};
+function Gallery() {
+  const { projects, isLoading, error } = useProjects();
 
-type GalleryProps = {
-  projects: Projects[];
-};
+  let renderedContent;
+  if (isLoading) {
+    renderedContent = <p>Loading...</p>;
+  } else if (error) {
+    renderedContent = <p>{error}</p>;
+  } else if (projects.length === 0) {
+    renderedContent = <p>No projects found</p>;
+  } else {
+    renderedContent = projects.map((project) => (
+      <Project project={project} key={project.title} />
+    ));
+  }
 
-function Gallery({ projects }: GalleryProps) {
   return (
     <section
       className="relative z-10 w-full bg-black pb-24 pt-8 text-slate-100"
       id="works"
     >
       <h3 className="sticky w-fit pl-[8%] text-slate-100">Réalisations</h3>
-      {projects.map((project, id) => (
-        <Project {...project} key={id} />
-      ))}
+      {renderedContent}
     </section>
   );
 }
