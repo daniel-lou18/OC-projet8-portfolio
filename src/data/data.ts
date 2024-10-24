@@ -18,12 +18,15 @@ export const cardsData = [
 
 export const skills = [
   { name: "HTML 5 & CSS 3", rating: 8 },
-  { name: "JavaScript ES6 & React", rating: 8 },
-  { name: "Node, Express & MongoDB", rating: 6 },
-  { name: "Next.js 14", rating: 5 },
-  { name: "TypeScript", rating: 5 },
-  { name: "Prisma + PostgreSQL", rating: 5 },
-  { name: "Sass & Tailwind CSS", rating: 5 },
+  { name: "JavaScript, React 18 & Next.js 14", rating: 8 },
+  { name: "TypeScript", rating: 7 },
+  { name: "Redux (RTK), TanStack Query", rating: 6 },
+  { name: "Tailwind CSS, Shadcn & Sass", rating: 6 },
+  { name: "Node, Express & Nest JS", rating: 5 },
+  { name: "Prisma, PostgreSQL & MongoDB", rating: 5 },
+  { name: "Jest & React Testing Library", rating: 5 },
+  { name: "Git & GitHub Actions (CI/CD)", rating: 4 },
+  { name: "Docker & AWS Lambda", rating: 3 },
 ];
 
 export const metaTagsData = {
