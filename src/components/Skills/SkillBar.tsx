@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function SkillBar({ rating }: { rating: number }) {
   return (
-    <div className="w-full overflow-hidden rounded-lg bg-slate-300">
+    <div className="h-4 w-full overflow-hidden rounded-lg bg-slate-300 sm:h-6 lg:h-8 xl:h-10">
       <motion.span
         className="inline-block h-full bg-gray-700"
         initial={{ width: `0%` }}
