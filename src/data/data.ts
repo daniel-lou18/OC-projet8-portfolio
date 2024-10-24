@@ -22,7 +22,7 @@ export const skills = [
   { name: "TypeScript", rating: 7 },
   { name: "Redux (RTK), TanStack Query", rating: 6 },
   { name: "Tailwind CSS, Shadcn & Sass", rating: 6 },
-  { name: "Node, Express & Nest JS", rating: 5 },
+  { name: "Node, Express & NestJS", rating: 5 },
   { name: "Prisma, PostgreSQL & MongoDB", rating: 5 },
   { name: "Jest & React Testing Library", rating: 5 },
   { name: "Git & GitHub Actions (CI/CD)", rating: 4 },
