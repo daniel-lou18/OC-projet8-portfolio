@@ -4,7 +4,7 @@ function SkillBar({ rating }: { rating: number }) {
   return (
     <div className="h-4 w-full overflow-hidden rounded-lg bg-slate-300 sm:h-6 lg:h-8 xl:h-10">
       <motion.span
-        className="inline-block h-full bg-gray-700"
+        className="inline-block h-[110%] bg-gray-700"
         initial={{ width: `0%` }}
         whileInView={{ width: `${rating * 10}%` }}
         viewport={{ once: true }}
